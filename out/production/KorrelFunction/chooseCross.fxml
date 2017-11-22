@@ -15,8 +15,9 @@
    <children>
       <GridPane>
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" percentWidth="50.0" prefWidth="278.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="320.0" minWidth="10.0" percentWidth="50.0" prefWidth="309.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" percentWidth="66.0" prefWidth="278.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" percentWidth="16.0" prefWidth="278.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="320.0" minWidth="10.0" percentWidth="68.0" prefWidth="309.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="312.0" minHeight="10.0" percentHeight="70.0" prefHeight="252.0" vgrow="SOMETIMES" />
@@ -41,7 +42,7 @@
                   <Button mnemonicParsing="false" text="Button" BorderPane.alignment="CENTER" />
                </bottom>
             </BorderPane>
-            <BorderPane GridPane.columnIndex="1">
+            <BorderPane GridPane.columnIndex="2">
                <center>
                   <LineChart minHeight="0.0" minWidth="0.0" title="График выбранного сигнала" BorderPane.alignment="CENTER">
                     <xAxis>
@@ -59,6 +60,27 @@
                   <Button mnemonicParsing="false" text="Button" BorderPane.alignment="CENTER" />
                </bottom>
             </BorderPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Button>
+                  <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Button>
+               </children>
+            </GridPane>
          </children>
       </GridPane>
    </children>

@@ -23,7 +23,7 @@ public class Main extends Application {
         SceneSelector.addScene("CHOOSE_CROSS_SCENE",new Scene(chooseCrossRoot, 300, 275));
         Parent mainRoot = FXMLLoader.load(getClass().getResource("../main.fxml"));
         SceneSelector.addScene("MAIN_SCENE",new Scene(mainRoot, 300, 275));
-        SceneSelector.chooseScene("CHOOSE_CROSS_SCENE");
+        SceneSelector.chooseScene("AUTO_KORREL_SCENE");
     }
 
 
