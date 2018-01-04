@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" fx:controller="controller.Controller" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <GridPane>
         <columnConstraints>
@@ -25,7 +25,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <BorderPane onMouseClicked="#moveFromMainToChooseAuto" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <bottom>
                   <Label alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" text="ФУНКЦИЯ" BorderPane.alignment="CENTER">
                      <font>
@@ -41,7 +41,7 @@
                   </Label>
                </center>
             </BorderPane>
-            <BorderPane GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <BorderPane onMouseClicked="#moveFromMainToChooseCross" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <center>
                   <Label alignment="CENTER_RIGHT" pickOnBounds="false" text="ВЗАИМОКОРРЕЛЯЦИОННАЯ" BorderPane.alignment="CENTER">
                      <font>

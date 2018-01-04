@@ -1,5 +1,6 @@
 package main;
 
+import controller.Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,19 +14,20 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         primaryStage.setTitle("Hello World");
         SceneSelector.setPrimaryStage(primaryStage);
-        Parent autoKorrelRoot = FXMLLoader.load(getClass().getResource("../autokorrel.fxml"));
-        SceneSelector.addScene("AUTO_KORREL_SCENE",new Scene(autoKorrelRoot, 300, 275));
-        Parent crossKorrelRoot = FXMLLoader.load(getClass().getResource("../crosskorrel.fxml"));
-        SceneSelector.addScene("CROSS_KORREL_SCENE",new Scene(crossKorrelRoot, 300, 275));
-        Parent chooseAutoRoot = FXMLLoader.load(getClass().getResource("../chooseAuto.fxml"));
-        SceneSelector.addScene("CHOOSE_AUTO_SCENE",new Scene(chooseAutoRoot, 300, 275));
-        Parent chooseCrossRoot = FXMLLoader.load(getClass().getResource("../chooseCross.fxml"));
-        SceneSelector.addScene("CHOOSE_CROSS_SCENE",new Scene(chooseCrossRoot, 300, 275));
-        Parent mainRoot = FXMLLoader.load(getClass().getResource("../main.fxml"));
-        SceneSelector.addScene("MAIN_SCENE",new Scene(mainRoot, 300, 275));
-        SceneSelector.chooseScene("AUTO_KORREL_SCENE");
+        loadScene("../autokorrel.fxml","AUTO_KORREL_SCENE");
+        loadScene("../crosskorrel.fxml","CROSS_KORREL_SCENE");
+        loadScene("../chooseAuto.fxml","CHOOSE_AUTO_SCENE");
+        loadScene("../chooseCross.fxml","CHOOSE_CROSS_SCENE");
+        loadScene("../main.fxml","MAIN_SCENE");
+        SceneSelector.chooseScene("MAIN_SCENE");
     }
 
+    private void loadScene(String resource, String key) throws Exception{
+        FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource(resource));
+        Parent root = fxmlLoader.load();
+        fxmlLoader.setController(Controller.getInstance());
+        SceneSelector.addScene(key,new Scene(root, 1820, 1000));
+    }
 
     public static void main(String[] args) {
         launch(args);
