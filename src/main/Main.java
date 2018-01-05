@@ -1,5 +1,6 @@
 package main;
 
+import com.sun.javafx.scene.SceneHelper;
 import controller.Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -25,7 +26,7 @@ public class Main extends Application {
     private void loadScene(String resource, String key) throws Exception{
         FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource(resource));
         Parent root = fxmlLoader.load();
-        fxmlLoader.setController(Controller.getInstance());
+        SceneSelector.addController(key,fxmlLoader.getController());
         SceneSelector.addScene(key,new Scene(root, 1820, 1000));
     }
 

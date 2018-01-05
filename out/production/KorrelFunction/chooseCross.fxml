@@ -36,7 +36,7 @@
                <children>
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <center>
-                        <LineChart title="График выбранного сигнала" BorderPane.alignment="CENTER">
+                        <LineChart fx:id="chooseCrossChart1" title="График выбранного сигнала" BorderPane.alignment="CENTER">
                           <xAxis>
                             <CategoryAxis side="BOTTOM" />
                           </xAxis>
@@ -49,11 +49,11 @@
                         </LineChart>
                      </center>
                      <bottom>
-                        <Button mnemonicParsing="false" text="Button" BorderPane.alignment="CENTER" />
+                        <Button mnemonicParsing="false" text="Выбрать" BorderPane.alignment="CENTER" />
                      </bottom></BorderPane>
                   <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <center>
-                        <LineChart title="График выбранного сигнала" BorderPane.alignment="CENTER">
+                        <LineChart fx:id="chooseCrossChart2" title="График выбранного сигнала" BorderPane.alignment="CENTER">
                           <xAxis>
                             <CategoryAxis side="BOTTOM" />
                           </xAxis>
@@ -66,7 +66,7 @@
                         </LineChart>
                      </center>
                      <bottom>
-                        <Button mnemonicParsing="false" text="Button" BorderPane.alignment="CENTER" />
+                        <Button mnemonicParsing="false" text="Выбрать" BorderPane.alignment="CENTER" />
                      </bottom>
                   </BorderPane>
                </children>
@@ -99,8 +99,8 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#moveFromChooseCrossToMain" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                  <Button mnemonicParsing="false" onAction="#moveFromChooseCrossToCrossKorrel" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                  <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#moveFromChooseCrossToMain" text="Назад" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Button mnemonicParsing="false" onAction="#moveFromChooseCrossToCrossKorrel" text="Далее" GridPane.columnIndex="2" GridPane.rowIndex="7" />
                </children>
             </GridPane>
          </children>

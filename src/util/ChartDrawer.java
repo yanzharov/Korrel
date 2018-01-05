@@ -5,19 +5,17 @@ import javafx.scene.chart.XYChart;
 
 public class ChartDrawer {
   public static void drawChart(LineChart lineChart, double amplitude, int period, int step){
+    lineChart.getData().clear();
     XYChart.Series series = new XYChart.Series();
-    series.getData().add(new XYChart.Data(1, 23));
-    series.getData().add(new XYChart.Data(2, 14));
-    series.getData().add(new XYChart.Data(3, 15));
-    series.getData().add(new XYChart.Data(4, 24));
-    series.getData().add(new XYChart.Data(5, 34));
-    series.getData().add(new XYChart.Data(6, 36));
-    series.getData().add(new XYChart.Data(7, 22));
-    series.getData().add(new XYChart.Data(8, 45));
-    series.getData().add(new XYChart.Data(9, 43));
-    series.getData().add(new XYChart.Data(10, 17));
-    series.getData().add(new XYChart.Data(11, 29));
-    series.getData().add(new XYChart.Data(12, 25));
+
+    series.getData().add(new XYChart.Data(""+-period/2+"",0));
+
+    for(int i=-period/2;i<period/2;i+=step){
+      series.getData().add(new XYChart.Data(""+i+"",amplitude*Math.cos(i)));
+    }
+
+    series.getData().add(new XYChart.Data(""+period/2+"",amplitude));
+    series.getData().add(new XYChart.Data(""+period/2+"",0));
 
     lineChart.getData().add(series);
   }

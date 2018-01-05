@@ -47,7 +47,7 @@
                   </LineChart>
                </center>
                <bottom>
-                  <Button mnemonicParsing="false" text="Button" BorderPane.alignment="CENTER" />
+                  <Button mnemonicParsing="false" text="Выбрать" BorderPane.alignment="CENTER" />
                </bottom>
                <opaqueInsets>
                   <Insets />
@@ -73,11 +73,11 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#moveFromChooseAutoToMain" text="Button" GridPane.columnIndex="1" GridPane.fillWidth="" GridPane.rowIndex="7">
+                  <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#moveFromChooseAutoToMain" text="Назад" GridPane.columnIndex="1" GridPane.fillWidth="" GridPane.rowIndex="7">
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin></Button>
-                  <Button mnemonicParsing="false" onAction="#moveFromChooseAutoToAutoKorrel" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                  <Button mnemonicParsing="false" onAction="#moveFromChooseAutoToAutoKorrel" text="Далее" GridPane.columnIndex="2" GridPane.rowIndex="7">
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin></Button>
