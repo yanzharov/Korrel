@@ -1,6 +1,6 @@
 package util;
 
-public class SignalKeeper {
+public class CrossSignalKeeper {
     private static String type;
     private static int amplitude;
     private static int begin;
@@ -11,7 +11,7 @@ public class SignalKeeper {
     }
 
     public static void setType(String type) {
-        SignalKeeper.type = type;
+        CrossSignalKeeper.type = type;
     }
 
     public static int getAmplitude() {
@@ -19,7 +19,7 @@ public class SignalKeeper {
     }
 
     public static void setAmplitude(int amplitude) {
-        SignalKeeper.amplitude = amplitude;
+        CrossSignalKeeper.amplitude = amplitude;
     }
 
     public static int getBegin() {
@@ -27,7 +27,7 @@ public class SignalKeeper {
     }
 
     public static void setBegin(int begin) {
-        SignalKeeper.begin = begin;
+        CrossSignalKeeper.begin = begin;
     }
 
     public static int getEnd() {
@@ -35,6 +35,6 @@ public class SignalKeeper {
     }
 
     public static void setEnd(int end) {
-        SignalKeeper.end = end;
+        CrossSignalKeeper.end = end;
     }
 }

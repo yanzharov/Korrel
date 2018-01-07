@@ -12,7 +12,7 @@ public class EditChooseAutoController {
   public LineChart chooseAutoChart;
 
   public void editChooseAutoChart() {
-    ChartDrawer.drawChart(chooseAutoChart,5,30,5);
+
   }
 
   public void moveFromChooseAutoToMain(ActionEvent actionEvent) {

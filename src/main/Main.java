@@ -7,9 +7,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import util.Parser;
 import util.SceneSelector;
 
+import java.awt.*;
+
 public class Main extends Application {
+    private Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -27,7 +31,7 @@ public class Main extends Application {
         FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource(resource));
         Parent root = fxmlLoader.load();
         SceneSelector.addController(key,fxmlLoader.getController());
-        SceneSelector.addScene(key,new Scene(root, 1820, 1000));
+        SceneSelector.addScene(key,new Scene(root, dim.getWidth()-100, dim.getHeight()-75));
     }
 
     public static void main(String[] args) {

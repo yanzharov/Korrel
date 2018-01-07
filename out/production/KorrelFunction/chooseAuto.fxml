@@ -47,7 +47,7 @@
                   </LineChart>
                </center>
                <bottom>
-                  <Button mnemonicParsing="false" text="Выбрать" BorderPane.alignment="CENTER" />
+                  <Button mnemonicParsing="false" onAction="#chooseAutoChart" text="Выбрать" BorderPane.alignment="CENTER" />
                </bottom>
                <opaqueInsets>
                   <Insets />
