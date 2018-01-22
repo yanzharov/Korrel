@@ -1,6 +1,7 @@
 package util;
 
 import bean.SignalKeeper;
+import bean.StrategyKeeper;
 import controller.Controller;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -15,6 +16,8 @@ public class SceneSelector {
     private static SignalKeeper autoSignalKeeper=new SignalKeeper();
     private static SignalKeeper crossSignalKeeper1=new SignalKeeper();
     private static SignalKeeper crossSignalKeeper2=new SignalKeeper();
+    private static StrategyKeeper autoStrategyKeeper=new StrategyKeeper();
+    private static StrategyKeeper crossStrategyKeeper=new StrategyKeeper();
 
     public static Stage getPrimaryStage() {
         return primaryStage;
@@ -49,23 +52,20 @@ public class SceneSelector {
         return autoSignalKeeper;
     }
 
-    public static void setAutoSignalKeeper(SignalKeeper autoSignalKeeper) {
-        SceneSelector.autoSignalKeeper = autoSignalKeeper;
-    }
-
     public static SignalKeeper getCrossSignalKeeper1() {
         return crossSignalKeeper1;
-    }
-
-    public static void setCrossSignalKeeper1(SignalKeeper crossSignalKeeper1) {
-        SceneSelector.crossSignalKeeper1 = crossSignalKeeper1;
     }
 
     public static SignalKeeper getCrossSignalKeeper2() {
         return crossSignalKeeper2;
     }
 
-    public static void setCrossSignalKeeper2(SignalKeeper crossSignalKeeper2) {
-        SceneSelector.crossSignalKeeper2 = crossSignalKeeper2;
+    public static StrategyKeeper getAutoStrategyKeeper() {
+        return autoStrategyKeeper;
     }
+
+    public static StrategyKeeper getCrossStrategyKeeper() {
+        return crossStrategyKeeper;
+    }
+
 }
