@@ -74,7 +74,7 @@
                 <NumberAxis autoRanging="false" lowerBound="-50.0" side="BOTTOM" upperBound="50.0" />
               </xAxis>
               <yAxis>
-                <NumberAxis side="LEFT" />
+                <NumberAxis side="LEFT" upperBound="3000.0" />
               </yAxis>
                <GridPane.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

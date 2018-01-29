@@ -5,6 +5,7 @@ public class SignalKeeper {
     private int amplitude;
     private int begin;
     private int end;
+    private int vertex;
 
     public String getType() {
         return type;
@@ -36,5 +37,13 @@ public class SignalKeeper {
 
     public void setEnd(int end) {
         this.end = end;
+    }
+
+    public int getVertex() {
+        return vertex;
+    }
+
+    public void setVertex(int vertex) {
+        this.vertex = vertex;
     }
 }

@@ -14,6 +14,9 @@ public class ChartDrawer {
     if(signalKeeper.getType().equals("Impuls")){
       drawImpuls(lineChart,signalKeeper);
     }
+    if(signalKeeper.getType().equals("TreugImpuls")){
+      drawTreugImpuls(lineChart,signalKeeper);
+    }
   }
 
   public static void drawKorrelSignal(LineChart lineChart, SignalKeeper signalKeeper1, SignalKeeper signalKeeper2, int step, StrategyKeeper strategyKeeper){
@@ -46,26 +49,51 @@ public class ChartDrawer {
     lineChart.getData().add(series);
   }
 
+  private static void drawTreugImpuls(LineChart lineChart, SignalKeeper signalKeeper){
+    lineChart.getData().clear();
+    XYChart.Series series = new XYChart.Series();
+
+    series.getData().add(new XYChart.Data(signalKeeper.getBegin(),0));
+    series.getData().add(new XYChart.Data(signalKeeper.getVertex(),signalKeeper.getAmplitude()));
+    series.getData().add(new XYChart.Data(signalKeeper.getEnd(),0));
+
+    lineChart.getData().add(series);
+  }
+
   private static void drawKorrelImpulsImpuls(LineChart lineChart, SignalKeeper signalKeeper1, SignalKeeper signalKeeper2, int step, StrategyKeeper strategyKeeper){
     lineChart.getData().clear();
 
-    int begin=Math.abs(signalKeeper2.getEnd()-signalKeeper1.getBegin());
+    int begin=-Math.abs(signalKeeper2.getEnd()-signalKeeper1.getBegin());
     int end=Math.abs(signalKeeper1.getEnd()-signalKeeper2.getBegin());
 
-    begin=(signalKeeper2.getEnd()<signalKeeper1.getBegin())?begin:-begin;
-    end=(signalKeeper1.getEnd()>signalKeeper2.getBegin())?end:-end;
-    begin=signalKeeper2.getBegin()+(signalKeeper2.getEnd()-signalKeeper2.getBegin())/2+begin;
-
     if(strategyKeeper.isStepStrategy()){
-      end = signalKeeper2.getBegin() + (signalKeeper2.getEnd() - signalKeeper2.getBegin()) / 2;
-    }
-    else{
-      end = signalKeeper2.getBegin() + (signalKeeper2.getEnd() - signalKeeper2.getBegin()) / 2 + end;
+      end = 0;
     }
 
     XYChart.Series series = new XYChart.Series();
 
     for(int i=begin;i<end+1;i+=step){
+      int amplitude=signalKeeper1.getAmplitude()*signalKeeper2.getAmplitude()*(signalKeeper2.getEnd()-signalKeeper2.getBegin()-Math.abs(i));
+      series.getData().add(new XYChart.Data(i,amplitude));
+    }
+
+    lineChart.getData().add(series);
+  }
+
+  private static void drawKorrelTreugImpulsTreugImpuls(LineChart lineChart, SignalKeeper signalKeeper1, SignalKeeper signalKeeper2, int step, StrategyKeeper strategyKeeper){
+    lineChart.getData().clear();
+
+    int begin=-Math.abs(signalKeeper2.getEnd()-signalKeeper1.getBegin());
+    int end=Math.abs(signalKeeper1.getEnd()-signalKeeper2.getBegin());
+
+    if(strategyKeeper.isStepStrategy()){
+      end = 0;
+    }
+
+    XYChart.Series series = new XYChart.Series();
+
+    for(int i=begin;i<end+1;i+=step){
+      
       int amplitude=signalKeeper1.getAmplitude()*signalKeeper2.getAmplitude()*(signalKeeper2.getEnd()-signalKeeper2.getBegin()-Math.abs(i));
       series.getData().add(new XYChart.Data(i,amplitude));
     }

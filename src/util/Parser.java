@@ -19,6 +19,7 @@ public class Parser {
             signalKeeper.setAmplitude(Integer.valueOf(properties.getProperty("AMPLITUDE")));
             signalKeeper.setBegin(Integer.valueOf(properties.getProperty("BEGIN")));
             signalKeeper.setEnd(Integer.valueOf(properties.getProperty("END")));
+            signalKeeper.setVertex(Integer.valueOf(properties.getProperty("VERTEX","0")));
         }
         catch (IOException e) {
             e.printStackTrace();
