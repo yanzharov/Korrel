@@ -55,7 +55,7 @@
               </rowConstraints>
                <children>
                   <Button mnemonicParsing="false" onAction="#moveFromAutoKorrelToChooseAuto" text="Назад" GridPane.columnIndex="1" />
-                  <Button mnemonicParsing="false" text="К началу" GridPane.columnIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#moveFromAutoKorrelToMain" text="К началу" GridPane.columnIndex="2" />
                </children>
             </GridPane>
             <LineChart fx:id="autoKorrelChart1" animated="false" title="График сигнала" GridPane.rowIndex="1">
@@ -74,7 +74,7 @@
                 <NumberAxis autoRanging="false" lowerBound="-50.0" side="BOTTOM" upperBound="50.0" />
               </xAxis>
               <yAxis>
-                <NumberAxis side="LEFT" upperBound="3000.0" />
+                <NumberAxis autoRanging="false" minorTickCount="0" minorTickLength="0.0" side="LEFT" tickUnit="500.0" upperBound="3000.0" />
               </yAxis>
                <GridPane.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

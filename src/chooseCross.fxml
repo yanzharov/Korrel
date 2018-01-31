@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
@@ -36,9 +35,9 @@
                <children>
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <center>
-                        <LineChart fx:id="chooseCrossChart1" title="График выбранного сигнала" BorderPane.alignment="CENTER">
+                        <LineChart fx:id="chooseCrossChart1" animated="false" title="График выбранного сигнала" BorderPane.alignment="CENTER">
                           <xAxis>
-                            <CategoryAxis side="BOTTOM" />
+                              <NumberAxis side="BOTTOM" />
                           </xAxis>
                           <yAxis>
                             <NumberAxis side="LEFT" />
@@ -53,9 +52,9 @@
                      </bottom></BorderPane>
                   <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <center>
-                        <LineChart fx:id="chooseCrossChart2" title="График выбранного сигнала" BorderPane.alignment="CENTER">
+                        <LineChart fx:id="chooseCrossChart2" animated="false" title="График выбранного сигнала" BorderPane.alignment="CENTER">
                           <xAxis>
-                            <CategoryAxis side="BOTTOM" />
+                              <NumberAxis side="BOTTOM" />
                           </xAxis>
                           <yAxis>
                             <NumberAxis side="LEFT" />
