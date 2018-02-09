@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Slider;
 import javafx.scene.input.KeyEvent;
@@ -42,6 +43,10 @@ public class Controller{
   public Slider crossSlider;
   @FXML
   public CheckBox crossCheckBox;
+  @FXML
+  public NumberAxis autoChart3AxisY;
+  @FXML
+  public NumberAxis crossChart3AxisY;
 
   public void moveFromMainToChooseAuto(MouseEvent mouseEvent) {
       ChartDrawer.drawSignal(SceneSelector.getController("CHOOSE_AUTO_SCENE").chooseAutoChart,SceneSelector.getAutoSignalKeeper());
@@ -81,6 +86,7 @@ public class Controller{
   }
 
   public void moveFromChooseAutoToAutoKorrel(ActionEvent actionEvent) {
+    AxisCreator.createAxis(SceneSelector.getController("AUTO_KORREL_SCENE").autoChart3AxisY,SceneSelector.getAutoSignalKeeper(),SceneSelector.getAutoSignalKeeper());
     int step=(int)SceneSelector.getController("AUTO_KORREL_SCENE").autoSlider.getValue();
     ChartDrawer.drawSignal(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart1,SceneSelector.getAutoSignalKeeper());
     ChartDrawer.drawSignal(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart2,SceneSelector.getAutoSignalKeeper());
@@ -93,6 +99,8 @@ public class Controller{
   }
 
   public void moveFromChooseCrossToCrossKorrel(ActionEvent actionEvent) {
+    AxisCreator.createAxis(SceneSelector.getController("CROSS_KORREL_SCENE").crossChart3AxisY
+        ,SceneSelector.getCrossSignalKeeper1(),SceneSelector.getCrossSignalKeeper2());
     int step=(int)SceneSelector.getController("CROSS_KORREL_SCENE").crossSlider.getValue();
     ChartDrawer.drawSignal(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart1,SceneSelector.getCrossSignalKeeper1());
     ChartDrawer.drawSignal(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart2,SceneSelector.getCrossSignalKeeper2());

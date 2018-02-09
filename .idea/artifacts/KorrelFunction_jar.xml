@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="KorrelFunction:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/KorrelFunction_jar</output-path>
+    <root id="archive" name="KorrelFunction.jar">
+      <element id="module-output" name="KorrelFunction" />
+    </root>
+  </artifact>
+</component>

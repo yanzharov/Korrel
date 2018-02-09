@@ -33,7 +33,7 @@
                </center></BorderPane>
             <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                <center>
-                  <LineChart fx:id="chooseAutoChart" animated="false" title="График выбранного сигнала" BorderPane.alignment="CENTER">
+                  <LineChart fx:id="chooseAutoChart" animated="false" legendVisible="false" title="График выбранного сигнала" BorderPane.alignment="CENTER">
                     <xAxis>
                       <NumberAxis side="BOTTOM" />
                     </xAxis>

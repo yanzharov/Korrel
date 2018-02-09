@@ -58,7 +58,7 @@
                   <Button mnemonicParsing="false" onAction="#moveFromAutoKorrelToMain" text="К началу" GridPane.columnIndex="2" />
                </children>
             </GridPane>
-            <LineChart fx:id="autoKorrelChart1" animated="false" title="График сигнала" GridPane.rowIndex="1">
+            <LineChart fx:id="autoKorrelChart1" animated="false" legendVisible="false" title="График сигнала" GridPane.rowIndex="1">
               <xAxis>
                 <NumberAxis autoRanging="false" lowerBound="-50.0" side="BOTTOM" upperBound="50.0" />
               </xAxis>
@@ -69,18 +69,18 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </GridPane.margin>
             </LineChart>
-            <LineChart fx:id="autoKorrelChart3" animated="false" title="График автокорреляционной функции сигнала" GridPane.rowIndex="4">
+            <LineChart fx:id="autoKorrelChart3" animated="false" legendVisible="false" title="График автокорреляционной функции сигнала" GridPane.rowIndex="4">
               <xAxis>
                 <NumberAxis autoRanging="false" lowerBound="-50.0" side="BOTTOM" upperBound="50.0" />
               </xAxis>
               <yAxis>
-                <NumberAxis autoRanging="false" minorTickCount="0" minorTickLength="0.0" side="LEFT" tickUnit="500.0" upperBound="3000.0" />
+                <NumberAxis fx:id="autoChart3AxisY" autoRanging="false" minorTickCount="0" minorTickLength="0.0" side="LEFT" tickUnit="500.0" upperBound="3000.0" />
               </yAxis>
                <GridPane.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </GridPane.margin>
             </LineChart>
-            <LineChart fx:id="autoKorrelChart2" animated="false" title="График сигнала" GridPane.rowIndex="2">
+            <LineChart fx:id="autoKorrelChart2" animated="false" legendVisible="false" title="График сигнала" GridPane.rowIndex="2">
               <xAxis>
                 <NumberAxis autoRanging="false" lowerBound="-50.0" side="BOTTOM" upperBound="50.0" />
               </xAxis>

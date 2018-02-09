@@ -35,7 +35,7 @@
                <children>
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <center>
-                        <LineChart fx:id="chooseCrossChart1" animated="false" title="График выбранного сигнала" BorderPane.alignment="CENTER">
+                        <LineChart fx:id="chooseCrossChart1" animated="false" legendVisible="false" title="График выбранного сигнала" BorderPane.alignment="CENTER">
                           <xAxis>
                               <NumberAxis side="BOTTOM" />
                           </xAxis>
@@ -52,7 +52,7 @@
                      </bottom></BorderPane>
                   <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <center>
-                        <LineChart fx:id="chooseCrossChart2" animated="false" title="График выбранного сигнала" BorderPane.alignment="CENTER">
+                        <LineChart fx:id="chooseCrossChart2" animated="false" legendVisible="false" title="График выбранного сигнала" BorderPane.alignment="CENTER">
                           <xAxis>
                               <NumberAxis side="BOTTOM" />
                           </xAxis>

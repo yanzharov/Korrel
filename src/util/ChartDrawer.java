@@ -98,6 +98,53 @@ public class ChartDrawer {
     lineChart.getData().add(series);
   }
 
+  private static void drawKorrelImpulsImpulsDiscret(LineChart lineChart, SignalKeeper signalKeeper1, SignalKeeper signalKeeper2, int step, StrategyKeeper strategyKeeper){
+    lineChart.getData().clear();
+
+    double signal1[]=new double[((signalKeeper1.getEnd()-signalKeeper1.getBegin())/step)+1];
+    double signal2[]=new double[((signalKeeper1.getEnd()-signalKeeper1.getBegin())*3/step)+1];
+    for(int i=0;i<signal1.length;i++){
+      signal1[i]=5*(1+((double)(10*(i-3))/30));
+    }
+    for(int i=0;i<7;i++){
+      signal2[i]=5*(1+((double)(10*(i-3))/30));
+    }
+    int shift=-6;
+    int begin=-Math.abs(signalKeeper2.getEnd()-signalKeeper1.getBegin());
+    int end=Math.abs(signalKeeper1.getEnd()-signalKeeper2.getBegin());
+
+    if(strategyKeeper.isStepStrategy()){
+      end = 0;
+    }
+
+    XYChart.Series series = new XYChart.Series();
+
+    for(int i=begin;i<end+1;i+=step){
+      double amplitude=sumSignal(signal1,signal2,shift);
+      shift++;
+      series.getData().add(new XYChart.Data(i,amplitude));
+    }
+
+    lineChart.getData().add(series);
+  }
+
+  private static double sumSignal(double[] signal1, double[] signal2, int shift){
+    if(shift==-6 || shift==6){
+      return 0;
+    }
+    for(int i=0;i<signal2.length;i++){
+      signal2[i]=0;
+    }
+    for(int i=6;i<13;i++){
+      signal2[i+shift]=5*(1+((double)(10*(i-6-3))/30));
+    }
+    double result=0;
+    for(int i=1;i<7;i++){
+      result+=signal1[i]*signal2[i+6];
+    }
+    return result*5;
+  }
+
   private static void drawKorrelTreugImpulsTreugImpuls(LineChart lineChart, SignalKeeper signalKeeper1, SignalKeeper signalKeeper2, int step, StrategyKeeper strategyKeeper){
     lineChart.getData().clear();
 
