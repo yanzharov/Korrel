@@ -6,6 +6,8 @@ public class SignalKeeper {
     private int begin;
     private int end;
     private int vertex;
+    private double[] signal;
+    private int duration;
 
     public String getType() {
         return type;
@@ -45,5 +47,21 @@ public class SignalKeeper {
 
     public void setVertex(int vertex) {
         this.vertex = vertex;
+    }
+
+    public double[] getSignal() {
+        return signal;
+    }
+
+    public void setSignal(double[] signal) {
+        this.signal = signal;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 }
