@@ -7,6 +7,8 @@ public class StrategyKeeper {
     private int defaultBegin;
     private int defaultEnd;
     private double[] signal;
+    private int leftShift;
+    private int rightShift;
 
     public boolean isStepStrategy() {
         return stepStrategy;
@@ -56,10 +58,33 @@ public class StrategyKeeper {
         this.signal = signal;
     }
 
-    public void copySignal(double[] originSignal) {
-        signal=new double[originSignal.length];
-        for(int i=0;i<signal.length-1;i++){
-            signal[i]=originSignal[i];
+    public int getLeftShift() {
+        return leftShift;
+    }
+
+    public void setLeftShift(int leftShift) {
+        this.leftShift = leftShift;
+    }
+
+    public int getRightShift() {
+        return rightShift;
+    }
+
+    public void setRightShift(int rightShift) {
+        this.rightShift = rightShift;
+    }
+
+    public void copySignal(SignalKeeper signalKeeper1, SignalKeeper signalKeeper2, int step) {
+        int leftShift=(signalKeeper2.getEnd()-signalKeeper1.getBegin())/step;
+        int rightShift=(signalKeeper1.getEnd()-signalKeeper2.getBegin())/step;
+
+        double signal2[]=new double[signalKeeper2.getSignal().length+leftShift+rightShift];
+        for(int i=leftShift;i<leftShift+signalKeeper2.getSignal().length;i++){
+            signal2[i]=signalKeeper2.getSignal()[i-leftShift];
         }
+
+        this.signal=signal2;
+        this.leftShift=leftShift;
+        this.rightShift=rightShift;
     }
 }

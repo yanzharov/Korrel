@@ -21,7 +21,7 @@ public class AxisCreator {
     if((signalKeeper1.getType().equals("Impuls")&&signalKeeper2.getType().equals("TreugImpuls"))){
       amplitude = ((signalKeeper1.getAmplitude() * signalKeeper2.getAmplitude()) * (Math.pow((signalKeeper2.getEnd()-signalKeeper2.getBegin()), 2)) / (2 * (signalKeeper2.getEnd()-signalKeeper2.getBegin())));
     }
-    numberAxis.setUpperBound(amplitude+amplitude/5);
+    numberAxis.setUpperBound(amplitude+2*amplitude/5);
     numberAxis.setTickUnit(amplitude/5);
   }
 }
