@@ -8,6 +8,8 @@ public class SignalKeeper {
     private int vertex;
     private double[] signal;
     private int duration;
+    private int step;
+    private double[] originSignal;
 
     public String getType() {
         return type;
@@ -63,5 +65,31 @@ public class SignalKeeper {
 
     public void setDuration(int duration) {
         this.duration = duration;
+    }
+
+    public int getStep() {
+        return step;
+    }
+
+    public void setStep(int step) {
+        this.step = step;
+    }
+
+    public double[] getOriginSignal() {
+        return originSignal;
+    }
+
+    public void setOriginSignal(double[] originSignal) {
+        this.originSignal = originSignal;
+    }
+
+    public void changeOriginSignal(int step){
+        int difference=step/getStep();
+        signal=new double[originSignal.length/difference+originSignal.length%difference];
+        int currentOriginDiscret=0;
+        for(int i=0;i<signal.length;i++){
+            signal[i]=originSignal[currentOriginDiscret];
+            currentOriginDiscret+=difference;
+        }
     }
 }

@@ -78,7 +78,7 @@ public class StrategyKeeper {
         int leftShift=(signalKeeper2.getEnd()-signalKeeper1.getBegin())/step;
         int rightShift=(signalKeeper1.getEnd()-signalKeeper2.getBegin())/step;
 
-        double signal2[]=new double[signalKeeper2.getSignal().length+leftShift+rightShift];
+        double signal2[]=new double[signalKeeper1.getSignal().length+(signalKeeper2.getSignal().length-1)*2];
         for(int i=leftShift;i<leftShift+signalKeeper2.getSignal().length;i++){
             signal2[i]=signalKeeper2.getSignal()[i-leftShift];
         }

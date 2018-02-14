@@ -46,7 +46,7 @@ public class ChartDrawer {
     int end=Math.abs(signalKeeper1.getEnd()-signalKeeper2.getBegin());
 
     double signal1[]=signalKeeper1.getSignal();
-    double signal2[]=new double[signalKeeper2.getSignal().length+leftShift+rightShift];
+    double signal2[]=new double[signal1.length+(signalKeeper2.getSignal().length-1)*2];
     for(int i=0;i<signalKeeper2.getSignal().length;i++){
       signal2[i]=signalKeeper2.getSignal()[i];
     }
@@ -64,7 +64,7 @@ public class ChartDrawer {
         amplitude=0;
       }
       else {
-        amplitude = sumSignal(signal1, signal2, shift, leftShift);
+        amplitude = sumSignal(signal1, signal2, shift, signalKeeper2.getSignal().length);
       }
       shift++;
       series.getData().add(new XYChart.Data(i,amplitude*step));
@@ -73,19 +73,20 @@ public class ChartDrawer {
     lineChart.getData().add(series);
   }
 
-  private static double sumSignal(double[] signal1, double[] signal2, int shift, int leftShift){
+  private static double sumSignal(double[] signal1, double[] signal2, int shift, int originLength){
     for(int i=signal2.length-2;i>-1;i--){
       signal2[i+1]=signal2[i];
     }
+    signal2[0]=0;
     double result=0;
     if(shift<0) {
       for (int i = 1; i < signal1.length; i++) {
-        result += signal1[i] * signal2[i + leftShift];
+        result += signal1[i] * signal2[i + originLength-1];
       }
     }
     else{
       for (int i = 1+shift; i < signal1.length; i++) {
-        result += signal1[i] * signal2[i + leftShift];
+        result += signal1[i] * signal2[i + originLength-1];
       }
     }
     return result;
@@ -100,7 +101,7 @@ public class ChartDrawer {
       XYChart.Series series = (XYChart.Series) lineChart.getData().get(0);
       XYChart.Data data = (XYChart.Data) series.getData().get(series.getData().size() - 1);
       int lastValue = (Integer) data.getXValue();
-      double amplitude = sumSignal(signalKeeper1.getSignal(), strategyKeeper.getSignal(), (lastValue+step)/step, strategyKeeper.getLeftShift());
+      double amplitude = sumSignal(signalKeeper1.getSignal(), strategyKeeper.getSignal(), (lastValue+step)/step, signalKeeper2.getSignal().length);
       series.getData().add(new XYChart.Data(lastValue + step, amplitude*step));
     }
     else if(increment==false && !(signalKeeper1End-step<signalKeeper2.getBegin())){
