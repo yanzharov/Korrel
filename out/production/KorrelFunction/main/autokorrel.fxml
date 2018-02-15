@@ -69,7 +69,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </GridPane.margin>
             </LineChart>
-            <LineChart fx:id="autoKorrelChart3" animated="false" legendVisible="false" title="График автокорреляционной функции сигнала" GridPane.rowIndex="4">
+            <LineChart fx:id="autoKorrelChart3" animated="false" createSymbols="false" legendVisible="false" title="График автокорреляционной функции сигнала" GridPane.rowIndex="4">
               <xAxis>
                 <NumberAxis autoRanging="false" lowerBound="-50.0" side="BOTTOM" upperBound="50.0" />
               </xAxis>
