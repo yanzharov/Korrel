@@ -103,7 +103,8 @@ public class ChartDrawer {
       XYChart.Series series = (XYChart.Series) lineChart.getData().get(0);
       XYChart.Data data = (XYChart.Data) series.getData().get(series.getData().size() - 1);
       int lastValue = (Integer) data.getXValue();
-      double amplitude = sumSignal(signalKeeper1.getSignal(), strategyKeeper.getSignal(), (lastValue+step)/step, signalKeeper2.getSignal().length, (strategyKeeper.getDefaultBegin()-signalKeeper1.getBegin())/step);
+      int beginDifference=(isAuto)?0:(strategyKeeper.getDefaultBegin()-signalKeeper1.getBegin())/step;
+      double amplitude = sumSignal(signalKeeper1.getSignal(), strategyKeeper.getSignal(), (lastValue+step)/step, signalKeeper2.getSignal().length, beginDifference);
       series.getData().add(new XYChart.Data(lastValue + step, amplitude*step));
     }
     else if(increment==false && !(signalKeeper1End-step<signalKeeper2.getBegin())){

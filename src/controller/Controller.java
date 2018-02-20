@@ -11,6 +11,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Slider;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
 import util.*;
 
@@ -132,7 +133,8 @@ public class Controller{
   public void chooseAutoChart(ActionEvent actionEvent) {
     File file= FileOpener.openFile();
     Parser.parseFile(file,SceneSelector.getAutoSignalKeeper());
-    ComboBoxCreator.createComboBox(SceneSelector.getController("AUTO_KORREL_SCENE").autoComboBox, SceneSelector.getAutoSignalKeeper().getStep());
+    int difference=SceneSelector.getAutoSignalKeeper().getDuration();
+    ComboBoxCreator.createComboBox(SceneSelector.getController("AUTO_KORREL_SCENE").autoComboBox, SceneSelector.getAutoSignalKeeper().getStep(),difference);
     int step=(int)SceneSelector.getController("AUTO_KORREL_SCENE").autoComboBox.getSelectionModel().getSelectedItem();
     ChartDrawer.drawSignal(SceneSelector.getController("CHOOSE_AUTO_SCENE").chooseAutoChart,SceneSelector.getAutoSignalKeeper(), step);
   }
@@ -140,8 +142,9 @@ public class Controller{
   public void chooseCrossChart1(ActionEvent actionEvent){
     File file= FileOpener.openFile();
     Parser.parseFile(file,SceneSelector.getCrossSignalKeeper1());
-    int difference=Math.abs(SceneSelector.getCrossSignalKeeper2().getEnd()-SceneSelector.getCrossSignalKeeper1().getEnd());
-    ComboBoxCreator.createComboBox(SceneSelector.getController("CROSS_KORREL_SCENE").crossComboBox, SceneSelector.getCrossSignalKeeper1().getStep(),SceneSelector.getCrossSignalKeeper2().getStep(),difference);
+    int difference1=SceneSelector.getCrossSignalKeeper1().getDuration();
+    int difference2=SceneSelector.getCrossSignalKeeper2().getDuration();
+    ComboBoxCreator.createComboBox(SceneSelector.getController("CROSS_KORREL_SCENE").crossComboBox, SceneSelector.getCrossSignalKeeper1().getStep(),SceneSelector.getCrossSignalKeeper2().getStep(),difference1,difference2);
     int step=(int)SceneSelector.getController("CROSS_KORREL_SCENE").crossComboBox.getSelectionModel().getSelectedItem();
     ChartDrawer.drawSignal(SceneSelector.getController("CHOOSE_CROSS_SCENE").chooseCrossChart1,SceneSelector.getCrossSignalKeeper1(), step);
   }
@@ -149,8 +152,9 @@ public class Controller{
   public void chooseCrossChart2(ActionEvent actionEvent){
     File file= FileOpener.openFile();
     Parser.parseFile(file,SceneSelector.getCrossSignalKeeper2());
-    int difference=Math.abs(SceneSelector.getCrossSignalKeeper2().getEnd()-SceneSelector.getCrossSignalKeeper1().getEnd());
-    ComboBoxCreator.createComboBox(SceneSelector.getController("CROSS_KORREL_SCENE").crossComboBox, SceneSelector.getCrossSignalKeeper1().getStep(),SceneSelector.getCrossSignalKeeper2().getStep(),difference);
+    int difference1=SceneSelector.getCrossSignalKeeper1().getDuration();
+    int difference2=SceneSelector.getCrossSignalKeeper2().getDuration();
+    ComboBoxCreator.createComboBox(SceneSelector.getController("CROSS_KORREL_SCENE").crossComboBox, SceneSelector.getCrossSignalKeeper1().getStep(),SceneSelector.getCrossSignalKeeper2().getStep(),difference1, difference2);
     int step=(int)SceneSelector.getController("CROSS_KORREL_SCENE").crossComboBox.getSelectionModel().getSelectedItem();
     ChartDrawer.drawSignal(SceneSelector.getController("CHOOSE_CROSS_SCENE").chooseCrossChart2,SceneSelector.getCrossSignalKeeper2(), step);
   }

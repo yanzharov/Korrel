@@ -28,7 +28,6 @@ public class AxisCreator {
       amplitude=1000;
     }
     numberAxis.setUpperBound(amplitude+2*amplitude/5);
-    numberAxis.setLowerBound(-(amplitude+2*amplitude/5));
     numberAxis.setTickUnit(amplitude/5);
   }
 }
