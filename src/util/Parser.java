@@ -25,13 +25,13 @@ public class Parser {
             int queueIndex=0;
             for(int i=0;i<signal.length;i++){
                 if(signalKeeper.getType().equals("TreugImpuls")) {
-                    signal[i] = 5 * (1 + ((double) (2*signalKeeper.getStep() * (i - 3)) / 30));
+                    signal[i] = 5 * (1 + ((double) (2*signalKeeper.getStep() * (i - signal.length/2)) / signalKeeper.getDuration()));
                 }
                 if(signalKeeper.getType().equals("Impuls")){
                     signal[i] = 10;
                 }
                 if(signalKeeper.getType().equals("PeriodSignal")){
-                    signal[i] = 10*Math.cos(i);
+                    signal[i] = 10*Math.cos((Math.PI/8)*i-Math.PI);
                 }
             }
             signalKeeper.setSignal(signal);
