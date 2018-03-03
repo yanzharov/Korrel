@@ -1,6 +1,3 @@
-#autoKorrelBorder:hover .autoKorrelLabel{
-    -fx-text-fill: red;
-}
-#crossKorrelBorder:hover .crossKorrelLabel{
+.borderPane:hover .labelText{
     -fx-text-fill: red;
 }

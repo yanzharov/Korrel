@@ -3,7 +3,7 @@ package util;
 import javafx.scene.control.ComboBox;
 
 public class ComboBoxCreator {
-  private static int[] options={1,5,10};
+  private static final int[] options={1,5,10};
   public static void createComboBox(ComboBox comboBox, int step, int difference){
     comboBox.getItems().clear();
     int length=(difference%10==0)?options.length:options.length-1;

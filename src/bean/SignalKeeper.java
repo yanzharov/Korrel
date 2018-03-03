@@ -5,11 +5,11 @@ public class SignalKeeper {
     private int amplitude;
     private int begin;
     private int end;
-    private int vertex;
     private double[] signal;
     private int duration;
     private int step;
     private double[] originSignal;
+    private boolean changed;
 
     public String getType() {
         return type;
@@ -41,14 +41,6 @@ public class SignalKeeper {
 
     public void setEnd(int end) {
         this.end = end;
-    }
-
-    public int getVertex() {
-        return vertex;
-    }
-
-    public void setVertex(int vertex) {
-        this.vertex = vertex;
     }
 
     public double[] getSignal() {
@@ -84,6 +76,10 @@ public class SignalKeeper {
     }
 
     public void changeOriginSignal(int step){
+        if(step==getStep()){
+            signal=originSignal;
+            return;
+        }
         int difference=step/getStep();
         signal=new double[originSignal.length/difference+originSignal.length%difference];
         int currentOriginDiscret=0;
@@ -91,5 +87,13 @@ public class SignalKeeper {
             signal[i]=originSignal[currentOriginDiscret];
             currentOriginDiscret+=difference;
         }
+    }
+
+    public boolean isChanged() {
+        return changed;
+    }
+
+    public void setChanged(boolean changed) {
+        this.changed = changed;
     }
 }

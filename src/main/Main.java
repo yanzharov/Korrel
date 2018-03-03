@@ -1,5 +1,6 @@
 package main;
 
+import controller.Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -21,13 +22,16 @@ public class Main extends Application {
         loadScene("chooseAuto.fxml","CHOOSE_AUTO_SCENE");
         loadScene("chooseCross.fxml","CHOOSE_CROSS_SCENE");
         loadScene("main.fxml","MAIN_SCENE");
+        loadScene("creator.fxml","CREATE_SCENE");
         SceneSelector.chooseScene("MAIN_SCENE");
     }
 
     private void loadScene(String resource, String key) throws Exception{
         FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource(resource));
         Parent root = fxmlLoader.load();
-        SceneSelector.addController(key,fxmlLoader.getController());
+        if(fxmlLoader.getController() instanceof Controller) {
+            SceneSelector.addController(key, fxmlLoader.getController());
+        }
         SceneSelector.addScene(key,new Scene(root, dim.getWidth()-100, dim.getHeight()-75));
     }
 

@@ -22,10 +22,10 @@
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="125.0" minHeight="0.0" percentHeight="5.0" prefHeight="22.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="187.0" minHeight="0.0" percentHeight="30.0" prefHeight="81.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="149.0" minHeight="10.0" percentHeight="30.0" prefHeight="120.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="187.0" minHeight="0.0" percentHeight="28.0" prefHeight="81.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="149.0" minHeight="10.0" percentHeight="28.0" prefHeight="120.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="149.0" minHeight="10.0" percentHeight="5.0" prefHeight="120.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="158.0" minHeight="10.0" percentHeight="30.0" prefHeight="123.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="158.0" minHeight="10.0" percentHeight="34.0" prefHeight="123.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="86.0" minHeight="0.0" percentHeight="5.0" prefHeight="54.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
@@ -88,19 +88,31 @@
                </children>
             </GridPane>
             <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
-               <right>
-                  <CheckBox fx:id="crossCheckBox" mnemonicParsing="false" onAction="#crossChangeStrategy" text="Построить пошагово" BorderPane.alignment="CENTER">
-                     <BorderPane.margin>
-                        <Insets right="20.0" />
-                     </BorderPane.margin></CheckBox>
-               </right>
                <left>
                   <ComboBox fx:id="crossComboBox" maxWidth="65.0" onHiding="#chooseCrossStep" prefWidth="65.0" promptText="Выбрать шаг" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
                         <Insets left="50.0" />
                      </BorderPane.margin>
                   </ComboBox>
-               </left></BorderPane>
+               </left>
+               <right>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <CheckBox fx:id="crossCheckBox" mnemonicParsing="false" onAction="#crossChangeStrategy" text="Построить пошагово" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets right="20.0" />
+                           </BorderPane.margin>
+                        </CheckBox>
+                     </center>
+                     <bottom>
+                        <CheckBox fx:id="crossKorrelDeleteDiscretsCheckBox" mnemonicParsing="false" onAction="#deleteCrossKorrelDiscrets" text="Убрать отсчеты" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets right="51.0" />
+                           </BorderPane.margin>
+                        </CheckBox>
+                     </bottom>
+                  </BorderPane>
+               </right></BorderPane>
          </children>
       </GridPane>
    </children>

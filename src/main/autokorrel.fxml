@@ -22,10 +22,10 @@
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="129.0" minHeight="0.0" percentHeight="5.0" prefHeight="0.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="267.0" minHeight="10.0" percentHeight="40.0" prefHeight="86.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="267.0" minHeight="10.0" percentHeight="40.0" prefHeight="86.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="267.0" minHeight="10.0" percentHeight="38.0" prefHeight="86.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="267.0" minHeight="10.0" percentHeight="38.0" prefHeight="86.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="267.0" minHeight="10.0" percentHeight="5.0" prefHeight="86.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="258.0" minHeight="10.0" percentHeight="40.0" prefHeight="143.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="258.0" minHeight="10.0" percentHeight="44.0" prefHeight="143.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="146.0" minHeight="10.0" percentHeight="10.0" prefHeight="146.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
@@ -74,7 +74,7 @@
                 <NumberAxis autoRanging="false" lowerBound="-50.0" side="BOTTOM" upperBound="50.0" />
               </xAxis>
               <yAxis>
-                <NumberAxis fx:id="autoChart3AxisY" autoRanging="false" minorTickCount="0" minorTickLength="0.0" side="LEFT" tickUnit="500.0" upperBound="3000.0" />
+                <NumberAxis fx:id="autoChart3AxisY" minorTickCount="0" minorTickLength="0.0" side="LEFT" tickUnit="500.0" upperBound="3000.0" />
               </yAxis>
                <GridPane.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -92,13 +92,6 @@
                </GridPane.margin>
             </LineChart>
             <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
-               <right>
-                  <CheckBox fx:id="autoCheckBox" mnemonicParsing="false" onAction="#autoChangeStrategy" text="Построить пошагово" BorderPane.alignment="CENTER">
-                     <BorderPane.margin>
-                        <Insets right="20.0" />
-                     </BorderPane.margin>
-                  </CheckBox>
-               </right>
                <left>
                   <ComboBox fx:id="autoComboBox" maxWidth="65.0" onHiding="#chooseStepAuto" prefWidth="65.0" promptText="Выбрать шаг" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
@@ -106,6 +99,24 @@
                      </BorderPane.margin>
                   </ComboBox>
                </left>
+               <right>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <CheckBox fx:id="autoCheckBox" mnemonicParsing="false" onAction="#autoChangeStrategy" text="Построить пошагово" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets right="20.0" />
+                           </BorderPane.margin>
+                        </CheckBox>
+                     </center>
+                     <bottom>
+                        <CheckBox fx:id="autoKorrelDeleteDiscretsCheckBox" mnemonicParsing="false" onAction="#deleteAutoKorrelDiscrets" text="Убрать отсчеты" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets right="51.0" />
+                           </BorderPane.margin>
+                        </CheckBox>
+                     </bottom>
+                  </BorderPane>
+               </right>
             </BorderPane>
          </children>
       </GridPane>

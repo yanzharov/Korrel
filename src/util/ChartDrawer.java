@@ -11,37 +11,37 @@ public class ChartDrawer {
     if(signalKeeper.getSignal()==null){
       return;
     }
-    drawDiscretImpuls(lineChart,signalKeeper, step);
-  }
-
-  public static void drawKorrelSignal(LineChart lineChart, SignalKeeper signalKeeper1, SignalKeeper signalKeeper2, int step, StrategyKeeper strategyKeeper){
-    drawKorrelDiscretImpuls(lineChart, signalKeeper1, signalKeeper2, step, strategyKeeper);
-  }
-
-  public static void incrementKorrelSignal(LineChart lineChart, SignalKeeper signalKeeper1, SignalKeeper signalKeeper2, StrategyKeeper strategyKeeper, int step, boolean increment, boolean isAuto){
-
-      incrementKorrelDiscretImpuls(lineChart, signalKeeper1, signalKeeper2, strategyKeeper, step, increment, isAuto);
-
-  }
-
-  private static void drawDiscretImpuls(LineChart lineChart, SignalKeeper signalKeeper, int step){
     lineChart.getData().clear();
     XYChart.Series series = new XYChart.Series();
     double signal[]=signalKeeper.getSignal();
     int currentDiscret=0;
-    series.getData().add(new XYChart.Data(signalKeeper.getBegin(), 0));
     for(int i=signalKeeper.getBegin();i<signalKeeper.getEnd()+1;i+=step) {
       series.getData().add(new XYChart.Data(i, signal[currentDiscret++]));
     }
-    series.getData().add(new XYChart.Data(signalKeeper.getEnd(), 0));
     lineChart.getData().add(series);
   }
 
-  private static void drawKorrelDiscretImpuls(LineChart lineChart, SignalKeeper signalKeeper1, SignalKeeper signalKeeper2, int step, StrategyKeeper strategyKeeper){
+  public static void drawSignal(LineChart lineChart, int begin, int end, double[] signal, int step){
+    if(signal==null){
+      return;
+    }
+    lineChart.getData().clear();
+    XYChart.Series series = new XYChart.Series();
+    int currentDiscret=0;
+    for(int i=begin;i<end+1;i+=step) {
+      series.getData().add(new XYChart.Data(i, signal[currentDiscret++]));
+    }
+    lineChart.getData().add(series);
+  }
+
+  public static void drawKorrelSignal(LineChart lineChart, SignalKeeper signalKeeper1, SignalKeeper signalKeeper2, int step, StrategyKeeper strategyKeeper){
+    if(signalKeeper1.getSignal()==null || signalKeeper2.getSignal()==null){
+      return;
+    }
+
     lineChart.getData().clear();
 
     int leftShift=(signalKeeper2.getEnd()-signalKeeper1.getBegin())/step;
-    int rightShift=(signalKeeper1.getEnd()-signalKeeper2.getBegin())/step;
     int begin=-Math.abs(signalKeeper2.getEnd()-signalKeeper1.getBegin());
     int end=Math.abs(signalKeeper1.getEnd()-signalKeeper2.getBegin());
 
@@ -52,7 +52,7 @@ public class ChartDrawer {
     }
 
     if(strategyKeeper.isStepStrategy()){
-      end = 0;
+      begin=end=strategyKeeper.getStepStrategyBegin();
     }
 
     XYChart.Series series = new XYChart.Series();
@@ -71,6 +71,32 @@ public class ChartDrawer {
     }
 
     lineChart.getData().add(series);
+  }
+
+  public static void incrementKorrelSignal(LineChart lineChart, SignalKeeper signalKeeper1, SignalKeeper signalKeeper2, StrategyKeeper strategyKeeper, int step, boolean increment, boolean isAuto){
+    if(signalKeeper1.getSignal()==null || signalKeeper2.getSignal()==null){
+      return;
+    }
+
+    int signalKeeper1Begin=(isAuto)?SceneSelector.getAutoStrategyKeeper().getDefaultBegin():signalKeeper1.getBegin();
+    int signalKeeper1End=(isAuto)?SceneSelector.getAutoStrategyKeeper().getDefaultEnd():signalKeeper1.getEnd();
+
+    if(increment==true && !(signalKeeper2.getEnd()<signalKeeper1Begin+step) && !(signalKeeper1End<signalKeeper2.getBegin())) {
+      XYChart.Series series = (XYChart.Series) lineChart.getData().get(0);
+      XYChart.Data data = (XYChart.Data) series.getData().get(series.getData().size() - 1);
+      int lastValue = (Integer) data.getXValue();
+      int beginDifference=(isAuto)?0:(strategyKeeper.getDefaultBegin()-signalKeeper1.getBegin())/step;
+      double amplitude = sumSignal(signalKeeper1.getSignal(), strategyKeeper.getSignal(), (lastValue+step)/step, signalKeeper2.getSignal().length, beginDifference);
+      series.getData().add(new XYChart.Data(lastValue + step, amplitude*step));
+    }
+    else if(increment==false && !(signalKeeper1End-step<signalKeeper2.getBegin())){
+      XYChart.Series series = (XYChart.Series) lineChart.getData().get(0);
+      if(series.getData().size()!=1) {
+        moveSignalBack(strategyKeeper.getSignal());
+        series.getData().remove(series.getData().size() - 1);
+      }
+    }
+
   }
 
   private static double sumSignal(double[] signal1, double[] signal2, int shift, int originLength, int beginDifference){
@@ -92,28 +118,6 @@ public class ChartDrawer {
     }
 
     return result;
-  }
-
-  private static void incrementKorrelDiscretImpuls(LineChart lineChart, SignalKeeper signalKeeper1, SignalKeeper signalKeeper2, StrategyKeeper strategyKeeper, int step, boolean increment, boolean isAuto){
-
-    int signalKeeper1Begin=(isAuto)?SceneSelector.getAutoStrategyKeeper().getDefaultBegin():signalKeeper1.getBegin();
-    int signalKeeper1End=(isAuto)?SceneSelector.getAutoStrategyKeeper().getDefaultEnd():signalKeeper1.getEnd();
-
-    if(increment==true && !(signalKeeper2.getEnd()<signalKeeper1Begin+step) && !(signalKeeper1End<signalKeeper2.getBegin())) {
-      XYChart.Series series = (XYChart.Series) lineChart.getData().get(0);
-      XYChart.Data data = (XYChart.Data) series.getData().get(series.getData().size() - 1);
-      int lastValue = (Integer) data.getXValue();
-      int beginDifference=(isAuto)?0:(strategyKeeper.getDefaultBegin()-signalKeeper1.getBegin())/step;
-      double amplitude = sumSignal(signalKeeper1.getSignal(), strategyKeeper.getSignal(), (lastValue+step)/step, signalKeeper2.getSignal().length, beginDifference);
-      series.getData().add(new XYChart.Data(lastValue + step, amplitude*step));
-    }
-    else if(increment==false && !(signalKeeper1End-step<signalKeeper2.getBegin())){
-      XYChart.Series series = (XYChart.Series) lineChart.getData().get(0);
-      if(series.getData().size()!=1) {
-        moveSignalBack(strategyKeeper.getSignal());
-        series.getData().remove(series.getData().size() - 1);
-      }
-    }
   }
 
   private static void moveSignalBack(double[] signal){
