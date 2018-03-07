@@ -28,17 +28,17 @@
                <center>
                   <Label text="ВЫБОР СИГНАЛА" BorderPane.alignment="CENTER">
                      <font>
-                        <Font name="System Bold" size="14.0" />
+                        <Font name="System Bold" size="18.0" />
                      </font></Label>
                </center></BorderPane>
             <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                <center>
                   <LineChart fx:id="chooseAutoChart" animated="false" legendVisible="false" title="График выбранного сигнала" BorderPane.alignment="CENTER">
                     <xAxis>
-                      <NumberAxis side="BOTTOM" />
+                      <NumberAxis minorTickLength="12.0" side="BOTTOM" style="-fx-tick-label-font-size: 18; -fx-border-width: 5;" tickLength="18.0" />
                     </xAxis>
                     <yAxis>
-                      <NumberAxis side="LEFT" />
+                      <NumberAxis minorTickLength="12.0" side="LEFT" style="-fx-tick-label-font-size: 18; -fx-border-width: 5;" tickLength="18.0" />
                     </yAxis>
                      <BorderPane.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -46,7 +46,13 @@
                   </LineChart>
                </center>
                <bottom>
-                  <Button mnemonicParsing="false" onAction="#chooseAutoChart" text="Выбрать" BorderPane.alignment="CENTER" />
+                  <Button mnemonicParsing="false" onAction="#chooseAutoChart" text="Выбрать" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets left="50.0" />
+                     </BorderPane.margin></Button>
                </bottom>
                <opaqueInsets>
                   <Insets />
@@ -75,11 +81,17 @@
                   <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#moveFromChooseAutoToMain" text="Назад" GridPane.columnIndex="1" GridPane.fillWidth="" GridPane.rowIndex="7">
                      <GridPane.margin>
                         <Insets />
-                     </GridPane.margin></Button>
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
                   <Button mnemonicParsing="false" onAction="#moveFromChooseAutoToAutoKorrel" text="Далее" GridPane.columnIndex="2" GridPane.rowIndex="7">
                      <GridPane.margin>
                         <Insets />
-                     </GridPane.margin></Button>
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
                </children>
             </GridPane>
          </children>

@@ -1,3 +1,6 @@
 .borderPane:hover .labelText{
     -fx-text-fill: red;
 }
+.mainText{
+    -fx-text-fill: blue;
+}
