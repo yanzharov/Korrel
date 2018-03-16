@@ -65,7 +65,7 @@ public class StrategyKeeper {
         this.stepStrategyBegin = stepStrategyBegin;
     }
 
-    public void copySignal(SignalKeeper signalKeeper1, SignalKeeper signalKeeper2, int step) {
+    public void copySignal(SignalKeeper signalKeeper1, SignalKeeper signalKeeper2) {
         double signal2[]=new double[signalKeeper1.getSignal().length+(signalKeeper2.getSignal().length-1)*2];
         for(int i=0;i<signalKeeper2.getSignal().length;i++){
             signal2[i]=signalKeeper2.getSignal()[i];

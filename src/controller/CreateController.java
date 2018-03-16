@@ -22,11 +22,14 @@ import util.SceneSelector;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
 import java.util.ResourceBundle;
 
 public class CreateController implements Initializable{
   private ObservableList<Point> pointsData = FXCollections.observableArrayList();
-  private double[] signal;
+  private double[] signalY;
+  private double[] signalX;
   private int begin;
   private int end;
   @FXML
@@ -41,6 +44,10 @@ public class CreateController implements Initializable{
   public TextField beginTextField;
   @FXML
   public LineChart constructedSignalChart;
+  @FXML
+  public TextField xAddField;
+  @FXML
+  public TextField yAddField;
 
   public void createTable(ActionEvent actionEvent) {
     pointsData.clear();
@@ -51,7 +58,6 @@ public class CreateController implements Initializable{
       pointsData.add(new Point(""+i+"",""+10+""));
     }
 
-    signal=new double[pointsData.size()];
     points.setItems(pointsData);
   }
 
@@ -83,15 +89,67 @@ public class CreateController implements Initializable{
   }
 
   public void constructSignal(ActionEvent actionEvent) {
+    signalY=new double[pointsData.size()];
+    signalX=new double[pointsData.size()];
     int currentDiscret=0;
     for(Point point:pointsData){
-      signal[currentDiscret]=Double.valueOf(point.getY());
+      signalY[currentDiscret]=Double.valueOf(point.getY());
+      signalX[currentDiscret]=Double.valueOf(point.getX());
       currentDiscret++;
     }
-    ChartDrawer.drawSignal(constructedSignalChart,begin,end,signal,1);
+    ChartDrawer.drawSignal(constructedSignalChart,begin,end,signalY, signalX,1);
   }
 
   public void moveToMain(ActionEvent actionEvent) {
     SceneSelector.chooseScene("MAIN_SCENE");
+  }
+
+  public void addPoint(ActionEvent actionEvent) {
+    int index=0;
+    int prevIndex=0;
+    String xCoord=xAddField.getCharacters().toString();
+    String yCoords=yAddField.getCharacters().toString();
+    ListIterator<Point> iterator=pointsData.listIterator();
+    if(Integer.valueOf(xCoord)>end){
+      end++;
+      pointsData.add(new Point(String.valueOf(end),yCoords));
+      return;
+    }
+    if(Integer.valueOf(xCoord)<begin){
+      begin--;
+      pointsData.add(0,new Point(String.valueOf(begin),yCoords));
+      return;
+    }
+    while(iterator.hasNext()){
+      Point point=iterator.next();
+      if(Integer.valueOf(point.getX())<Integer.valueOf(xCoord)){
+        prevIndex=iterator.previousIndex();
+      }
+    }
+    while(iterator.hasPrevious()){
+      Point point=iterator.previous();
+      if(point.getX().equals(xCoord)){
+        index=iterator.nextIndex();
+        break;
+      }
+    }
+    if(index!=0) {
+      pointsData.add(index + 1, new Point(xCoord, yCoords));
+    }
+    else{
+      pointsData.add(prevIndex+1, new Point(xCoord, yCoords));
+    }
+  }
+
+  public void deletePoint(ActionEvent actionEvent) {
+    String xCoord=xAddField.getCharacters().toString();
+    String yCoords=yAddField.getCharacters().toString();
+    ListIterator<Point> iterator=pointsData.listIterator();
+    while(iterator.hasNext()){
+      Point point=iterator.next();
+      if(point.getX().equals(xCoord) && point.getY().equals(yCoords)){
+        iterator.remove();
+      }
+    }
   }
 }

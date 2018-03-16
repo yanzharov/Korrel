@@ -32,8 +32,9 @@ public class FileOpener {
             writer.write("STEP="+step+"\n");
             writer.write("SIGNAL=");
             for(Point point : points) {
+                String X = point.getX();
                 String Y = point.getY();
-                writer.write(Y+",");
+                writer.write("("+X+";"+Y+"),");
             }
             writer.close();
         }

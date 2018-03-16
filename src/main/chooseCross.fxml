@@ -37,10 +37,10 @@
                      <center>
                         <LineChart fx:id="chooseCrossChart1" animated="false" legendVisible="false" title="График выбранного сигнала" BorderPane.alignment="CENTER">
                           <xAxis>
-                              <NumberAxis side="BOTTOM" />
+                              <NumberAxis minorTickLength="12.0" side="BOTTOM" style="-fx-tick-label-font-size: 18; -fx-border-width: 5;" tickLength="18.0" />
                           </xAxis>
                           <yAxis>
-                            <NumberAxis side="LEFT" />
+                            <NumberAxis minorTickLength="12.0" side="LEFT" style="-fx-tick-label-font-size: 18; -fx-border-width: 5;" tickLength="18.0" />
                           </yAxis>
                            <BorderPane.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -48,16 +48,19 @@
                         </LineChart>
                      </center>
                      <bottom>
-                        <Button mnemonicParsing="false" onAction="#chooseCrossChart1" text="Выбрать" BorderPane.alignment="CENTER" />
+                        <Button mnemonicParsing="false" onAction="#chooseCrossChart1" text="Выбрать" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Button>
                      </bottom></BorderPane>
                   <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                      <center>
                         <LineChart fx:id="chooseCrossChart2" animated="false" legendVisible="false" title="График выбранного сигнала" BorderPane.alignment="CENTER">
                           <xAxis>
-                              <NumberAxis side="BOTTOM" />
+                              <NumberAxis minorTickLength="12.0" side="BOTTOM" style="-fx-tick-label-font-size: 18; -fx-border-width: 5;" tickLength="18.0" />
                           </xAxis>
                           <yAxis>
-                            <NumberAxis side="LEFT" />
+                            <NumberAxis minorTickLength="12.0" side="LEFT" style="-fx-tick-label-font-size: 18; -fx-border-width: 5;" tickLength="18.0" />
                           </yAxis>
                            <BorderPane.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -65,7 +68,10 @@
                         </LineChart>
                      </center>
                      <bottom>
-                        <Button mnemonicParsing="false" onAction="#chooseCrossChart2" text="Выбрать" BorderPane.alignment="CENTER" />
+                        <Button mnemonicParsing="false" onAction="#chooseCrossChart2" text="Выбрать" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Button>
                      </bottom>
                   </BorderPane>
                </children>
@@ -74,7 +80,7 @@
                <center>
                   <Label text="ВЫБОР СИГНАЛА" BorderPane.alignment="CENTER">
                      <font>
-                        <Font name="System Bold" size="14.0" />
+                        <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
                </center>
@@ -98,8 +104,14 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#moveFromChooseCrossToMain" text="Назад" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                  <Button mnemonicParsing="false" onAction="#moveFromChooseCrossToCrossKorrel" text="Далее" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                  <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#moveFromChooseCrossToMain" text="Назад" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#moveFromChooseCrossToCrossKorrel" text="Далее" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
                </children>
             </GridPane>
          </children>

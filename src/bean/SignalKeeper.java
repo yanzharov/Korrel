@@ -10,6 +10,8 @@ public class SignalKeeper {
     private int step;
     private double[] originSignal;
     private boolean changed;
+    private double[] signalX;
+    private double[] signalY;
 
     public String getType() {
         return type;
@@ -75,20 +77,6 @@ public class SignalKeeper {
         this.originSignal = originSignal;
     }
 
-    public void changeOriginSignal(int step){
-        if(step==getStep()){
-            signal=originSignal;
-            return;
-        }
-        int difference=step/getStep();
-        signal=new double[originSignal.length/difference+originSignal.length%difference];
-        int currentOriginDiscret=0;
-        for(int i=0;i<signal.length;i++){
-            signal[i]=originSignal[currentOriginDiscret];
-            currentOriginDiscret+=difference;
-        }
-    }
-
     public boolean isChanged() {
         return changed;
     }
@@ -96,4 +84,21 @@ public class SignalKeeper {
     public void setChanged(boolean changed) {
         this.changed = changed;
     }
+
+    public double[] getSignalX() {
+        return signalX;
+    }
+
+    public void setSignalX(double[] signalX) {
+        this.signalX = signalX;
+    }
+
+    public double[] getSignalY() {
+        return signalY;
+    }
+
+    public void setSignalY(double[] signalY) {
+        this.signalY = signalY;
+    }
+
 }

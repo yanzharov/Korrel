@@ -3,33 +3,52 @@ package util;
 import bean.SignalKeeper;
 import bean.StrategyKeeper;
 import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 
 public class ChartDrawer {
 
-  public static void drawSignal(LineChart lineChart, SignalKeeper signalKeeper, int step){
+  public static void drawSignal(LineChart lineChart, SignalKeeper signalKeeper){
     if(signalKeeper.getSignal()==null){
       return;
     }
     lineChart.getData().clear();
     XYChart.Series series = new XYChart.Series();
-    double signal[]=signalKeeper.getSignal();
     int currentDiscret=0;
-    for(int i=signalKeeper.getBegin();i<signalKeeper.getEnd()+1;i+=step) {
-      series.getData().add(new XYChart.Data(i, signal[currentDiscret++]));
+    int begin=signalKeeper.getBegin();
+    int end=signalKeeper.getEnd();
+    double[] signalX=signalKeeper.getSignalX();
+    double[] signalY=signalKeeper.getSignalY();
+
+    for(int i=begin;i<end+1;i+=signalKeeper.getStep()) {
+      if(!(i==end)&&currentDiscret!=0&&signalX[currentDiscret]==signalX[currentDiscret-1]){
+        i--;
+      }
+      series.getData().add(new XYChart.Data(i, signalY[currentDiscret]));
+      currentDiscret++;
+      if(i==end&&!(signalX.length-1<currentDiscret)&&signalX[currentDiscret]==signalX[currentDiscret-1]){
+        i--;
+      }
     }
     lineChart.getData().add(series);
   }
 
-  public static void drawSignal(LineChart lineChart, int begin, int end, double[] signal, int step){
-    if(signal==null){
+  public static void drawSignal(LineChart lineChart, int begin, int end, double[] signalY, double[] signalX, int step){
+    if(signalY==null){
       return;
     }
     lineChart.getData().clear();
     XYChart.Series series = new XYChart.Series();
     int currentDiscret=0;
     for(int i=begin;i<end+1;i+=step) {
-      series.getData().add(new XYChart.Data(i, signal[currentDiscret++]));
+      if(!(i==end)&&currentDiscret!=0&&signalX[currentDiscret]==signalX[currentDiscret-1]){
+        i--;
+      }
+      series.getData().add(new XYChart.Data(i, signalY[currentDiscret]));
+      currentDiscret++;
+      if(i==end&&!(signalX.length-1<currentDiscret)&&signalX[currentDiscret]==signalX[currentDiscret-1]){
+        i--;
+      }
     }
     lineChart.getData().add(series);
   }
@@ -41,7 +60,7 @@ public class ChartDrawer {
 
     lineChart.getData().clear();
 
-    int leftShift=(signalKeeper2.getEnd()-signalKeeper1.getBegin())/step;
+    int leftShift=(signalKeeper2.getEnd()-signalKeeper1.getBegin())/signalKeeper2.getStep();
     int begin=-Math.abs(signalKeeper2.getEnd()-signalKeeper1.getBegin());
     int end=Math.abs(signalKeeper1.getEnd()-signalKeeper2.getBegin());
 
@@ -59,15 +78,15 @@ public class ChartDrawer {
     double amplitude=0;
     int shift=-leftShift;
 
-    for(int i=begin;i<end+1;i+=step){
+    for(int i=begin;i<end+1;i+=signalKeeper2.getStep()){
       if(shift==-leftShift){
         amplitude=0;
       }
       else {
-        amplitude = sumSignal(signal1, signal2, shift, signalKeeper2.getSignal().length, (signalKeeper2.getBegin()-signalKeeper1.getBegin())/step);
+        amplitude = sumSignal(signal1, signal2, shift, signalKeeper2.getSignal().length, (signalKeeper2.getBegin()-signalKeeper1.getBegin())/signalKeeper2.getStep());
       }
       shift++;
-      series.getData().add(new XYChart.Data(i,amplitude*step));
+      series.getData().add(new XYChart.Data(i,amplitude*signalKeeper2.getStep()));
     }
 
     lineChart.getData().add(series);
@@ -81,19 +100,23 @@ public class ChartDrawer {
     int signalKeeper1Begin=(isAuto)?SceneSelector.getAutoStrategyKeeper().getDefaultBegin():signalKeeper1.getBegin();
     int signalKeeper1End=(isAuto)?SceneSelector.getAutoStrategyKeeper().getDefaultEnd():signalKeeper1.getEnd();
 
-    if(increment==true && !(signalKeeper2.getEnd()<signalKeeper1Begin+step) && !(signalKeeper1End<signalKeeper2.getBegin())) {
+    if(increment==true && !(signalKeeper2.getEnd()<signalKeeper1Begin+signalKeeper1.getStep()) && !(signalKeeper1End<signalKeeper2.getBegin())) {
       XYChart.Series series = (XYChart.Series) lineChart.getData().get(0);
-      XYChart.Data data = (XYChart.Data) series.getData().get(series.getData().size() - 1);
-      int lastValue = (Integer) data.getXValue();
-      int beginDifference=(isAuto)?0:(strategyKeeper.getDefaultBegin()-signalKeeper1.getBegin())/step;
-      double amplitude = sumSignal(signalKeeper1.getSignal(), strategyKeeper.getSignal(), (lastValue+step)/step, signalKeeper2.getSignal().length, beginDifference);
-      series.getData().add(new XYChart.Data(lastValue + step, amplitude*step));
+      for(int i=0;i<step;i++) {
+        XYChart.Data data = (XYChart.Data) series.getData().get(series.getData().size() - 1);
+        int lastValue = (Integer) data.getXValue();
+        int beginDifference = (isAuto) ? 0 : (strategyKeeper.getDefaultBegin() - signalKeeper1.getBegin()) / signalKeeper1.getStep();
+        double amplitude = sumSignal(signalKeeper1.getSignal(), strategyKeeper.getSignal(), (lastValue + signalKeeper1.getStep()) / signalKeeper1.getStep(), signalKeeper2.getSignal().length, beginDifference);
+        series.getData().add(new XYChart.Data(lastValue + signalKeeper1.getStep(), amplitude * signalKeeper1.getStep()));
+      }
     }
-    else if(increment==false && !(signalKeeper1End-step<signalKeeper2.getBegin())){
+    else if(increment==false && !(signalKeeper1End-signalKeeper1.getStep()<signalKeeper2.getBegin())){
       XYChart.Series series = (XYChart.Series) lineChart.getData().get(0);
       if(series.getData().size()!=1) {
-        moveSignalBack(strategyKeeper.getSignal());
-        series.getData().remove(series.getData().size() - 1);
+        for(int i=0;i<step;i++) {
+          moveSignalBack(strategyKeeper.getSignal());
+        }
+        series.getData().remove(series.getData().size()-step,series.getData().size());
       }
     }
 

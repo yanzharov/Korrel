@@ -33,14 +33,19 @@
                <center>
                   <Label text="СОЗДАНИЕ СИГНАЛА" BorderPane.alignment="CENTER">
                      <font>
-                        <Font name="System Bold" size="14.0" />
+                        <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
                </center>
             </BorderPane>
             <GridPane GridPane.rowIndex="2">
               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="45.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="13.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="5.0" prefWidth="58.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" percentWidth="5.0" prefWidth="48.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.0" minWidth="10.0" percentWidth="5.0" prefWidth="49.0" />
@@ -53,29 +58,48 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <TextField fx:id="endTextField" GridPane.columnIndex="4">
+                  <TextField fx:id="endTextField" GridPane.columnIndex="9">
                      <GridPane.margin>
                         <Insets left="2.0" />
                      </GridPane.margin>
                   </TextField>
-                  <Label text="Начало:" GridPane.columnIndex="1">
+                  <Label text="Начало:" GridPane.columnIndex="6">
                      <GridPane.margin>
                         <Insets left="10.0" />
                      </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
                   </Label>
-                  <Label text="Конец:" GridPane.columnIndex="3">
+                  <Label text="Конец:" GridPane.columnIndex="8">
                      <GridPane.margin>
                         <Insets left="10.0" />
                      </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#createTable" text="Задать" GridPane.columnIndex="5">
+                  <Button mnemonicParsing="false" onAction="#createTable" text="Задать" GridPane.columnIndex="10">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
                   </Button>
-                  <TextField fx:id="beginTextField" GridPane.columnIndex="2" />
-                  <Button mnemonicParsing="false" onAction="#saveFile" text="Сохранить" GridPane.columnIndex="7" />
-                  <Button mnemonicParsing="false" onAction="#constructSignal" text="Отобразить" GridPane.columnIndex="6" />
+                  <TextField fx:id="beginTextField" GridPane.columnIndex="7" />
+                  <Button mnemonicParsing="false" onAction="#saveFile" text="Сохранить" GridPane.columnIndex="12">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#constructSignal" text="Отобразить" GridPane.columnIndex="11">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <TextField GridPane.columnIndex="1" fx:id="xAddField" />
+                  <TextField fx:id="yAddField" GridPane.columnIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#addPoint" text="Внести" GridPane.columnIndex="3" />
+                  <Button mnemonicParsing="false" onAction="#deletePoint" text="Удалить" GridPane.columnIndex="4" />
                </children>
             </GridPane>
             <GridPane GridPane.rowIndex="1">
@@ -99,10 +123,10 @@
                   </TableView>
                   <LineChart fx:id="constructedSignalChart" animated="false" legendVisible="false" title="График сигнала" GridPane.columnIndex="2">
                     <xAxis>
-                        <NumberAxis side="BOTTOM" />
+                        <NumberAxis minorTickLength="12.0" side="BOTTOM" style="-fx-tick-label-font-size: 18; -fx-border-width: 5;" tickLength="18.0" />
                     </xAxis>
                     <yAxis>
-                      <NumberAxis side="LEFT" />
+                      <NumberAxis minorTickLength="12.0" side="LEFT" style="-fx-tick-label-font-size: 18; -fx-border-width: 5;" tickLength="18.0" />
                     </yAxis>
                      <GridPane.margin>
                         <Insets right="100.0" />
@@ -122,7 +146,10 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" onAction="#moveToMain" text="Назад" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#moveToMain" text="Назад" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
                </children>
             </GridPane>
          </children>
