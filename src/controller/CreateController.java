@@ -51,6 +51,11 @@ public class CreateController implements Initializable{
 
   public void createTable(ActionEvent actionEvent) {
     pointsData.clear();
+    String beginStr=beginTextField.getCharacters().toString();
+    String endStr=endTextField.getCharacters().toString();
+    if(!beginStr.matches("-?[0-9]+")||!endStr.matches("-?[0-9]+")){
+      return;
+    }
     begin=Integer.valueOf(beginTextField.getCharacters().toString());
     end=Integer.valueOf(endTextField.getCharacters().toString());
 
@@ -80,6 +85,9 @@ public class CreateController implements Initializable{
   }
 
   public void saveFile(ActionEvent actionEvent) {
+    if(begin==end){
+      return;
+    }
     try {
       FileOpener.saveFile(pointsData, begin, end, 1);
     }
@@ -89,6 +97,9 @@ public class CreateController implements Initializable{
   }
 
   public void constructSignal(ActionEvent actionEvent) {
+    if(begin==end){
+      return;
+    }
     signalY=new double[pointsData.size()];
     signalX=new double[pointsData.size()];
     int currentDiscret=0;
@@ -109,6 +120,9 @@ public class CreateController implements Initializable{
     int prevIndex=0;
     String xCoord=xAddField.getCharacters().toString();
     String yCoords=yAddField.getCharacters().toString();
+    if(!xCoord.matches("-?[0-9]+")||!yCoords.matches("-?[0-9]+([0-9]+)?")){
+      return;
+    }
     ListIterator<Point> iterator=pointsData.listIterator();
     if(Integer.valueOf(xCoord)>end){
       end++;

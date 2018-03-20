@@ -40,30 +40,32 @@
             </BorderPane>
             <GridPane GridPane.rowIndex="2">
               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="13.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="2.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="6.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="5.0" prefWidth="58.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" percentWidth="5.0" prefWidth="48.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="6.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" percentWidth="5.0" prefWidth="58.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" percentWidth="5.0" prefWidth="48.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.0" minWidth="10.0" percentWidth="5.0" prefWidth="49.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" percentWidth="5.0" prefWidth="48.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" percentWidth="5.0" prefWidth="203.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" percentWidth="6.0" prefWidth="203.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" percentWidth="6.0" prefWidth="203.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="31.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <TextField fx:id="endTextField" GridPane.columnIndex="9">
+                  <TextField fx:id="endTextField" GridPane.columnIndex="11">
                      <GridPane.margin>
                         <Insets left="2.0" />
                      </GridPane.margin>
                   </TextField>
-                  <Label text="Начало:" GridPane.columnIndex="6">
+                  <Label text="Начало:" GridPane.columnIndex="8">
                      <GridPane.margin>
                         <Insets left="10.0" />
                      </GridPane.margin>
@@ -71,7 +73,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label text="Конец:" GridPane.columnIndex="8">
+                  <Label text="Конец:" GridPane.columnIndex="10">
                      <GridPane.margin>
                         <Insets left="10.0" />
                      </GridPane.margin>
@@ -79,7 +81,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#createTable" text="Задать" GridPane.columnIndex="10">
+                  <Button mnemonicParsing="false" onAction="#createTable" text="Задать" GridPane.columnIndex="12">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
@@ -87,35 +89,58 @@
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <TextField fx:id="beginTextField" GridPane.columnIndex="7" />
-                  <Button mnemonicParsing="false" onAction="#saveFile" text="Сохранить" GridPane.columnIndex="12">
+                  <TextField fx:id="beginTextField" GridPane.columnIndex="9" />
+                  <Button mnemonicParsing="false" onAction="#saveFile" text="Сохранить" GridPane.columnIndex="14">
                      <font>
                         <Font size="14.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" onAction="#constructSignal" text="Отобразить" GridPane.columnIndex="11">
+                  <Button mnemonicParsing="false" onAction="#constructSignal" text="Отобразить" GridPane.columnIndex="13">
                      <font>
                         <Font size="14.0" />
                      </font></Button>
-                  <TextField GridPane.columnIndex="1" fx:id="xAddField" />
-                  <TextField fx:id="yAddField" GridPane.columnIndex="2" />
-                  <Button mnemonicParsing="false" onAction="#addPoint" text="Внести" GridPane.columnIndex="3" />
-                  <Button mnemonicParsing="false" onAction="#deletePoint" text="Удалить" GridPane.columnIndex="4" />
+                  <TextField GridPane.columnIndex="2" fx:id="xAddField" />
+                  <TextField fx:id="yAddField" GridPane.columnIndex="4" />
+                  <Button mnemonicParsing="false" onAction="#addPoint" text="Внести" GridPane.columnIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin></Button>
+                  <Button mnemonicParsing="false" onAction="#deletePoint" text="Удалить" GridPane.columnIndex="6">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Label text="Время" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin></Label>
+                  <Label text="Значение" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin></Label>
                </children>
             </GridPane>
             <GridPane GridPane.rowIndex="1">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="23.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="64.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="65.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <TableView fx:id="points" editable="true" prefHeight="200.0" prefWidth="200.0">
+                  <TableView fx:id="points" editable="true" maxWidth="200.0" minWidth="200.0" prefWidth="200.0">
                     <columns>
-                      <TableColumn fx:id="coordX" maxWidth="99.0" minWidth="-1.0" prefWidth="99.0" text="Time" />
-                      <TableColumn fx:id="coordY" prefWidth="97.0" text="Amplitude" />
+                      <TableColumn fx:id="coordX" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Время" />
+                      <TableColumn fx:id="coordY" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Значение" />
                     </columns>
                      <GridPane.margin>
                         <Insets left="200.0" />
