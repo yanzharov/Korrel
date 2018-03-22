@@ -8,6 +8,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -18,11 +19,14 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import util.ChartDrawer;
 import util.FileOpener;
 import util.SceneSelector;
+import util.SignalBuilder;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 import java.util.ListIterator;
 import java.util.ResourceBundle;
 
@@ -32,6 +36,8 @@ public class CreateController implements Initializable{
   private double[] signalX;
   private int begin;
   private int end;
+  private double amplitude;
+  private String currentSignal;
   @FXML
   public TableView<Point> points;
   @FXML
@@ -43,25 +49,30 @@ public class CreateController implements Initializable{
   @FXML
   public TextField beginTextField;
   @FXML
+  public TextField amplitudeTextField;
+  @FXML
   public LineChart constructedSignalChart;
   @FXML
   public TextField xAddField;
   @FXML
   public TextField yAddField;
+  @FXML
+  public ChoiceBox signals;
 
   public void createTable(ActionEvent actionEvent) {
     pointsData.clear();
+    double amplitude=0;
     String beginStr=beginTextField.getCharacters().toString();
     String endStr=endTextField.getCharacters().toString();
-    if(!beginStr.matches("-?[0-9]+")||!endStr.matches("-?[0-9]+")){
+    String amplitudeStr=amplitudeTextField.getCharacters().toString();
+    if(!beginStr.matches("-?[0-9]+")||!endStr.matches("-?[0-9]+")||!amplitudeStr.matches("-?[0-9]+([0-9]+)?")){
       return;
     }
     begin=Integer.valueOf(beginTextField.getCharacters().toString());
     end=Integer.valueOf(endTextField.getCharacters().toString());
+    amplitude=Double.valueOf(amplitudeTextField.getCharacters().toString());
 
-    for(int i=begin;i<end+1;i++){
-      pointsData.add(new Point(""+i+"",""+10+""));
-    }
+    pointsData.addAll(SignalBuilder.buildSignal(signals.getSelectionModel().getSelectedItem().toString(),amplitude,begin,end));
 
     points.setItems(pointsData);
   }
@@ -82,6 +93,9 @@ public class CreateController implements Initializable{
           }
         }
     );
+    String[] signalsStr={"Прямоугольный видеоимпульс","Треугольный видеоимпульс","Прямой треугольный видеоимпульс"};
+    signals.getItems().addAll(signalsStr);
+    signals.getSelectionModel().select(0);
   }
 
   public void saveFile(ActionEvent actionEvent) {
