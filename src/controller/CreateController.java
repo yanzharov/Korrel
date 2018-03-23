@@ -93,7 +93,8 @@ public class CreateController implements Initializable{
           }
         }
     );
-    String[] signalsStr={"Прямоугольный видеоимпульс","Треугольный видеоимпульс","Прямой треугольный видеоимпульс"};
+    String[] signalsStr={"Прямоугольный видеоимпульс","Треугольный видеоимпульс","Прямой треугольный видеоимпульс",
+        "Косинусоидальный сигнал","Синусоидальный сигнал","Последовательность прямоугольных видеоимпульсов"};
     signals.getItems().addAll(signalsStr);
     signals.getSelectionModel().select(0);
   }
