@@ -32,7 +32,7 @@ public class Main extends Application {
         if(fxmlLoader.getController() instanceof Controller) {
             SceneSelector.addController(key, fxmlLoader.getController());
         }
-        SceneSelector.addScene(key,new Scene(root, dim.getWidth()-100, dim.getHeight()-75));
+        SceneSelector.addScene(key,new Scene(root, dim.getWidth(), dim.getHeight()-75));
     }
 
     public static void main(String[] args) {

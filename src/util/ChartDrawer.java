@@ -21,7 +21,7 @@ public class ChartDrawer {
     double[] signalY=signalKeeper.getSignalY();
 
     for(int i=begin;i<end+1;i+=signalKeeper.getStep()) {
-      if(!(i==end)&&currentDiscret!=0&&signalX[currentDiscret]==signalX[currentDiscret-1]){
+      if(!(signalX.length-1==currentDiscret)&&currentDiscret!=0&&signalX[currentDiscret]==signalX[currentDiscret-1]){
         i--;
       }
       series.getData().add(new XYChart.Data(i, signalY[currentDiscret]));
@@ -41,7 +41,7 @@ public class ChartDrawer {
     XYChart.Series series = new XYChart.Series();
     int currentDiscret=0;
     for(int i=begin;i<end+1;i+=step) {
-      if(!(i==end)&&currentDiscret!=0&&signalX[currentDiscret]==signalX[currentDiscret-1]){
+      if(!(signalX.length-1==currentDiscret)&&currentDiscret!=0&&signalX[currentDiscret]==signalX[currentDiscret-1]){
         i--;
       }
       series.getData().add(new XYChart.Data(i, signalY[currentDiscret]));
