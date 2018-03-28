@@ -51,6 +51,18 @@ public class Controller{
   @FXML
   public NumberAxis crossChart3AxisY;
   @FXML
+  public NumberAxis autoChart1AxisX;
+  @FXML
+  public NumberAxis autoChart2AxisX;
+  @FXML
+  public NumberAxis autoChart3AxisX;
+  @FXML
+  public NumberAxis crossChart1AxisX;
+  @FXML
+  public NumberAxis crossChart2AxisX;
+  @FXML
+  public NumberAxis crossChart3AxisX;
+  @FXML
   public CheckBox autoKorrelDeleteDiscretsCheckBox;
   @FXML
   public CheckBox crossKorrelDeleteDiscretsCheckBox;
@@ -155,6 +167,7 @@ public class Controller{
     SceneSelector.getAutoSignalKeeper().setChanged(true);
     int difference=SceneSelector.getAutoSignalKeeper().getDuration();
     ComboBoxCreator.createComboBox(SceneSelector.getController("AUTO_KORREL_SCENE").autoComboBox, SceneSelector.getAutoSignalKeeper().getStep(),difference);
+    ChartBuilder.buildChart(SceneSelector.getAutoSignalKeeper(),SceneSelector.getAutoSignalKeeper(),true);
     ChartDrawer.drawSignal(SceneSelector.getController("CHOOSE_AUTO_SCENE").chooseAutoChart,SceneSelector.getAutoSignalKeeper());
   }
 
@@ -168,6 +181,7 @@ public class Controller{
     int difference1=SceneSelector.getCrossSignalKeeper1().getDuration();
     int difference2=SceneSelector.getCrossSignalKeeper2().getDuration();
     ComboBoxCreator.createComboBox(SceneSelector.getController("CROSS_KORREL_SCENE").crossComboBox, SceneSelector.getCrossSignalKeeper1().getStep(),SceneSelector.getCrossSignalKeeper2().getStep(),difference1,difference2);
+    ChartBuilder.buildChart(SceneSelector.getCrossSignalKeeper1(),SceneSelector.getCrossSignalKeeper2(),false);
     ChartDrawer.drawSignal(SceneSelector.getController("CHOOSE_CROSS_SCENE").chooseCrossChart1,SceneSelector.getCrossSignalKeeper1());
   }
 
@@ -181,6 +195,7 @@ public class Controller{
     int difference1=SceneSelector.getCrossSignalKeeper1().getDuration();
     int difference2=SceneSelector.getCrossSignalKeeper2().getDuration();
     ComboBoxCreator.createComboBox(SceneSelector.getController("CROSS_KORREL_SCENE").crossComboBox, SceneSelector.getCrossSignalKeeper1().getStep(),SceneSelector.getCrossSignalKeeper2().getStep(),difference1, difference2);
+    ChartBuilder.buildChart(SceneSelector.getCrossSignalKeeper1(),SceneSelector.getCrossSignalKeeper2(),false);
     ChartDrawer.drawSignal(SceneSelector.getController("CHOOSE_CROSS_SCENE").chooseCrossChart2,SceneSelector.getCrossSignalKeeper2());
   }
 

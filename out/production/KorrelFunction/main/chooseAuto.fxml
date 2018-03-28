@@ -35,13 +35,13 @@
                <center>
                   <LineChart fx:id="chooseAutoChart" animated="false" legendVisible="false" title="График выбранного сигнала" BorderPane.alignment="CENTER">
                     <xAxis>
-                      <NumberAxis minorTickLength="12.0" side="BOTTOM" style="-fx-tick-label-font-size: 18; -fx-border-width: 5;" tickLength="18.0" />
+                      <NumberAxis label="t, мкс" minorTickLength="12.0" side="BOTTOM" style="-fx-tick-label-font-size: 18; -fx-border-width: 5;" tickLength="18.0" />
                     </xAxis>
                     <yAxis>
-                      <NumberAxis minorTickLength="12.0" side="LEFT" style="-fx-tick-label-font-size: 18; -fx-border-width: 5;" tickLength="18.0" />
+                      <NumberAxis label="S(t), В" minorTickLength="12.0" side="LEFT" style="-fx-tick-label-font-size: 18; -fx-border-width: 5;" tickLength="18.0" />
                     </yAxis>
                      <BorderPane.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        <Insets bottom="10.0" left="10.0" right="30.0" top="10.0" />
                      </BorderPane.margin>
                   </LineChart>
                </center>
