@@ -40,7 +40,7 @@
                      </font></Label>
                </center>
             </BorderPane>
-            <LineChart fx:id="crossKorrelChart1" animated="false" legendVisible="false" title="График сигнала" GridPane.rowIndex="1">
+            <LineChart fx:id="crossKorrelChart1" animated="false" legendVisible="false" title="График сигнала s1(t)" GridPane.rowIndex="1">
               <xAxis>
                   <NumberAxis fx:id="crossChart1AxisX" autoRanging="false" lowerBound="-50.0" minorTickLength="12.0" side="BOTTOM" style="-fx-tick-label-font-size: 18; -fx-border-width: 5;" tickLabelGap="0.0" tickLength="18.0" upperBound="50.0" />
               </xAxis>
@@ -51,7 +51,7 @@
                   <Insets bottom="10.0" left="10.0" right="30.0" top="10.0" />
                </GridPane.margin>
             </LineChart>
-            <LineChart fx:id="crossKorrelChart2" animated="false" legendVisible="false" title="График сигнала" GridPane.rowIndex="3">
+            <LineChart fx:id="crossKorrelChart2" animated="false" legendVisible="false" title="График сигнала s2(t)" GridPane.rowIndex="3">
               <xAxis>
                   <NumberAxis fx:id="crossChart2AxisX" autoRanging="false" lowerBound="-50.0" minorTickLength="12.0" side="BOTTOM" style="-fx-tick-label-font-size: 18; -fx-border-width: 5;" tickLabelGap="0.0" tickLength="18.0" upperBound="50.0" />
               </xAxis>
@@ -62,7 +62,7 @@
                   <Insets bottom="10.0" left="10.0" right="30.0" top="10.0" />
                </GridPane.margin>
             </LineChart>
-            <LineChart fx:id="crossKorrelChart3" animated="false" legendVisible="false" title="График взаимокорреляционной функции сигнала" GridPane.rowIndex="6">
+            <LineChart fx:id="crossKorrelChart3" animated="false" legendVisible="false" title="График взаимокорреляционной функции сигнала R(τ)" GridPane.rowIndex="6">
               <xAxis>
                   <NumberAxis fx:id="crossChart3AxisX" autoRanging="false" lowerBound="-100.0" minorTickLength="12.0" side="BOTTOM" style="-fx-tick-label-font-size: 18; -fx-border-width: 5;" tickLabelGap="0.0" tickLength="18.0" />
               </xAxis>
@@ -97,13 +97,6 @@
                </children>
             </GridPane>
             <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
-               <left>
-                  <ComboBox fx:id="crossComboBox" maxWidth="65.0" prefWidth="65.0" promptText="Выбрать шаг" BorderPane.alignment="CENTER">
-                     <BorderPane.margin>
-                        <Insets left="50.0" />
-                     </BorderPane.margin>
-                  </ComboBox>
-               </left>
                <right>
                   <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <center>
@@ -127,7 +120,25 @@
                         </CheckBox>
                      </bottom>
                   </BorderPane>
-               </right></BorderPane>
+               </right>
+               <left>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <ComboBox fx:id="crossComboBox" maxWidth="65.0" prefWidth="65.0" promptText="Выбрать шаг" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets left="50.0" />
+                           </BorderPane.margin>
+                        </ComboBox>
+                     </center>
+                     <left>
+                        <Label contentDisplay="CENTER" text="Шаг: " BorderPane.alignment="CENTER">
+                           <padding>
+                              <Insets left="60.0" />
+                           </padding>
+                        </Label>
+                     </left>
+                  </BorderPane>
+               </left></BorderPane>
             <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                <center>
                   <Label text="t, мкс" BorderPane.alignment="CENTER">

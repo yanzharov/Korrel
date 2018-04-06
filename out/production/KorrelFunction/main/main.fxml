@@ -105,12 +105,12 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" styleClass="mainText" stylesheets="@style.css" text="Динамическая визуализация информации" textAlignment="CENTER" GridPane.columnIndex="1">
+                  <Label alignment="CENTER" contentDisplay="CENTER" styleClass="mainText" stylesheets="@style.css" text="Динамическая визуальная информация" textAlignment="CENTER" GridPane.columnIndex="1">
                      <font>
                         <Font name="System Bold" size="36.0" />
                      </font>
                      <GridPane.margin>
-                        <Insets />
+                        <Insets left="20.0" />
                      </GridPane.margin>
                   </Label>
                   <Label alignment="CENTER" contentDisplay="CENTER" text="для проведения занятий по учебным дисциплинам" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -175,7 +175,7 @@
                            </font>
                         </Label>
                      </center></BorderPane>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-radius: 70; -fx-border-color: #1E90FF; -fx-border-width: 5;" styleClass="borderPane" stylesheets="@style.css" GridPane.columnIndex="3">
+                  <BorderPane onMouseClicked="#moveFromMainToHelpScene" prefHeight="200.0" prefWidth="200.0" style="-fx-border-radius: 70; -fx-border-color: #1E90FF; -fx-border-width: 5;" styleClass="borderPane" stylesheets="@style.css" GridPane.columnIndex="3">
                      <center>
                         <Label styleClass="labelText" stylesheets="@style.css" text="СПРАВКА" BorderPane.alignment="CENTER">
                            <font>

@@ -1,5 +1,6 @@
 package controller;
 
+import bean.SignalKeeper;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -9,6 +10,7 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Slider;
+import javafx.scene.control.Tooltip;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
@@ -112,6 +114,7 @@ public class Controller{
       ChartDrawer.drawSignal(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart2, SceneSelector.getAutoSignalKeeper());
       ChartDrawer.drawKorrelSignal(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart3, SceneSelector.getAutoSignalKeeper(), SceneSelector.getAutoSignalKeeper(), step, SceneSelector.getAutoStrategyKeeper());
       SceneSelector.getAutoSignalKeeper().setChanged(false);
+      TooltipSetter.addTooltips(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart3);
     }
     SceneSelector.chooseScene("AUTO_KORREL_SCENE");
   }
@@ -128,6 +131,7 @@ public class Controller{
       ChartDrawer.drawKorrelSignal(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart3, SceneSelector.getCrossSignalKeeper1(), SceneSelector.getCrossSignalKeeper2(), step, SceneSelector.getCrossStrategyKeeper());
       SceneSelector.getCrossSignalKeeper1().setChanged(false);
       SceneSelector.getCrossSignalKeeper2().setChanged(false);
+      TooltipSetter.addTooltips(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart3);
     }
     SceneSelector.chooseScene("CROSS_KORREL_SCENE");
   }
@@ -222,6 +226,7 @@ public class Controller{
     }
     ChartDrawer.drawSignal(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart2,SceneSelector.getAutoSignalKeeper());
     ChartDrawer.drawKorrelSignal(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart3,SceneSelector.getAutoSignalKeeper(),SceneSelector.getAutoSignalKeeper(),step, SceneSelector.getAutoStrategyKeeper());
+    TooltipSetter.addTooltips(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart3);
   }
 
   public void crossChangeStrategy(ActionEvent actionEvent) {
@@ -249,6 +254,7 @@ public class Controller{
     }
     ChartDrawer.drawSignal(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart2,SceneSelector.getCrossSignalKeeper2());
     ChartDrawer.drawKorrelSignal(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart3,SceneSelector.getCrossSignalKeeper1(),SceneSelector.getCrossSignalKeeper2(),step, SceneSelector.getCrossStrategyKeeper());
+    TooltipSetter.addTooltips(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart3);
   }
 
   public void moveAutoSignal(KeyEvent keyEvent) {
@@ -261,6 +267,7 @@ public class Controller{
       SceneSelector.getAutoSignalKeeper().setBegin(SceneSelector.getAutoSignalKeeper().getBegin()+step);
       SceneSelector.getAutoSignalKeeper().setEnd(SceneSelector.getAutoSignalKeeper().getEnd()+step);
       ChartDrawer.incrementKorrelSignal(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart3,SceneSelector.getAutoSignalKeeper(),SceneSelector.getAutoSignalKeeper(), SceneSelector.getAutoStrategyKeeper(), step, true, true);
+      TooltipSetter.addTooltip(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart3, step);
     }
     if(keyEvent.getCode().getName().equalsIgnoreCase("LEFT")){
       SceneSelector.getAutoSignalKeeper().setBegin(SceneSelector.getAutoSignalKeeper().getBegin()-step);
@@ -280,6 +287,7 @@ public class Controller{
       SceneSelector.getCrossSignalKeeper2().setBegin(SceneSelector.getCrossSignalKeeper2().getBegin()+step);
       SceneSelector.getCrossSignalKeeper2().setEnd(SceneSelector.getCrossSignalKeeper2().getEnd()+step);
       ChartDrawer.incrementKorrelSignal(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart3,SceneSelector.getCrossSignalKeeper1(),SceneSelector.getCrossSignalKeeper2(), SceneSelector.getCrossStrategyKeeper(), step, true, false);
+      TooltipSetter.addTooltip(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart3, step);
     }
     if(keyEvent.getCode().getName().equalsIgnoreCase("LEFT")){
       SceneSelector.getCrossSignalKeeper2().setBegin(SceneSelector.getCrossSignalKeeper2().getBegin()-step);
@@ -311,5 +319,20 @@ public class Controller{
 
   public void createSignal(MouseEvent actionEvent) {
     SceneSelector.chooseScene("CREATE_SCENE");
+  }
+
+  public void changeSignals(ActionEvent actionEvent) {
+    SignalKeeper signalKeeper1=SceneSelector.getCrossSignalKeeper1();
+    SignalKeeper signalKeeper2=SceneSelector.getCrossSignalKeeper2();
+    SceneSelector.setCrossSignalKeeper1(signalKeeper2);
+    SceneSelector.setCrossSignalKeeper2(signalKeeper1);
+    SceneSelector.getCrossSignalKeeper1().setChanged(true);
+    SceneSelector.getCrossSignalKeeper2().setChanged(true);
+    ChartDrawer.drawSignal(SceneSelector.getController("CHOOSE_CROSS_SCENE").chooseCrossChart1,SceneSelector.getCrossSignalKeeper1());
+    ChartDrawer.drawSignal(SceneSelector.getController("CHOOSE_CROSS_SCENE").chooseCrossChart2,SceneSelector.getCrossSignalKeeper2());
+  }
+
+  public void moveFromMainToHelpScene(MouseEvent mouseEvent) {
+    SceneSelector.chooseScene("HELP_SCENE");
   }
 }

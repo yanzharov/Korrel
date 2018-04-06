@@ -23,6 +23,7 @@ public class Main extends Application {
         loadScene("chooseCross.fxml","CHOOSE_CROSS_SCENE");
         loadScene("main.fxml","MAIN_SCENE");
         loadScene("creator.fxml","CREATE_SCENE");
+        loadScene("help.fxml","HELP_SCENE");
         SceneSelector.chooseScene("MAIN_SCENE");
     }
 

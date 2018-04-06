@@ -69,4 +69,11 @@ public class SceneSelector {
         return crossStrategyKeeper;
     }
 
+    public static void setCrossSignalKeeper1(SignalKeeper crossSignalKeeper1) {
+        SceneSelector.crossSignalKeeper1 = crossSignalKeeper1;
+    }
+
+    public static void setCrossSignalKeeper2(SignalKeeper crossSignalKeeper2) {
+        SceneSelector.crossSignalKeeper2 = crossSignalKeeper2;
+    }
 }
