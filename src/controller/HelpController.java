@@ -2,6 +2,7 @@ package controller;
 
 import bean.Point;
 import javafx.embed.swing.SwingFXUtils;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -71,5 +72,9 @@ public class HelpController implements Initializable{
     VBox pageBox = new VBox();
     pageBox.getChildren().add(imageView);
     return pageBox;
+  }
+
+  public void moveFromHelpToMainScene(ActionEvent actionEvent) {
+    SceneSelector.chooseScene("MAIN_SCENE");
   }
 }

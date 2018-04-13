@@ -83,7 +83,7 @@
                 <NumberAxis fx:id="autoChart3AxisX" autoRanging="false" lowerBound="-50.0" minorTickLength="12.0" side="BOTTOM" style="-fx-border-width: 5; -fx-tick-label-font-size: 18;" tickLabelGap="0.0" tickLength="18.0" upperBound="50.0" />
               </xAxis>
               <yAxis>
-                <NumberAxis fx:id="autoChart3AxisY" label="R(τ), В*В" minorTickLength="12.0" side="LEFT" style="-fx-tick-label-font-size: 18; -fx-border-width: 5;" tickLength="18.0" tickUnit="500.0" upperBound="3000.0" />
+                <NumberAxis fx:id="autoChart3AxisY" label="R(τ), В*В*мкс" minorTickLength="12.0" side="LEFT" style="-fx-tick-label-font-size: 18; -fx-border-width: 5;" tickLength="18.0" tickUnit="500.0" upperBound="3000.0" />
               </yAxis>
                <GridPane.margin>
                   <Insets bottom="10.0" left="10.0" right="30.0" top="10.0" />

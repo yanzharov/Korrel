@@ -7,21 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/controller/Controller.class" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/controller/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/util/SceneSelector.class" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/util/SceneSelector.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/controller/HelpController$1.class" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/controller/HelpController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/controller/HelpController$2.class" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/controller/HelpController$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/controller/HelpController.class" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/controller/HelpController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/main/autokorrel.fxml" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/main/autokorrel.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/main/chooseCross.fxml" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/main/chooseCross.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/main/crosskorrel.fxml" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/main/crosskorrel.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/main/main.fxml" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/main/main.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/Controller.java" afterPath="$PROJECT_DIR$/src/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Main.java" afterPath="$PROJECT_DIR$/src/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/main/help.fxml" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/main/help.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/HelpController.java" afterPath="$PROJECT_DIR$/src/controller/HelpController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/autokorrel.fxml" afterPath="$PROJECT_DIR$/src/main/autokorrel.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/chooseCross.fxml" afterPath="$PROJECT_DIR$/src/main/chooseCross.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/crosskorrel.fxml" afterPath="$PROJECT_DIR$/src/main/crosskorrel.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/main.fxml" afterPath="$PROJECT_DIR$/src/main/main.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/ChartDrawer.java" afterPath="$PROJECT_DIR$/src/util/ChartDrawer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/SceneSelector.java" afterPath="$PROJECT_DIR$/src/util/SceneSelector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/help.fxml" afterPath="$PROJECT_DIR$/src/main/help.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,49 +81,169 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="706">
-              <caret line="335" column="0" lean-forward="false" selection-start-line="335" selection-start-column="0" selection-end-line="335" selection-end-column="0" />
+            <state relative-caret-position="5202">
+              <caret line="335" column="4" lean-forward="false" selection-start-line="335" selection-start-column="4" selection-end-line="335" selection-end-column="44" />
               <folding>
+                <element signature="e#19964#19965#0" expanded="true" />
                 <element signature="e#20013#20014#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="help.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/help.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="174" lean-forward="false" selection-start-line="8" selection-start-column="174" selection-end-line="8" selection-end-column="174" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HelpController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/controller/HelpController.java">
+      <file leaf-file-name="crosskorrel.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/crosskorrel.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="281" lean-forward="false" selection-start-line="16" selection-start-column="244" selection-end-line="16" selection-end-column="281" />
+              <folding>
+                <marker date="1523526826764" expanded="true" signature="4915:5028" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="5098:6628" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="5132:5694" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="5725:6021" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="6047:6604" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="6203:6314" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="6231:6305" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="6466:6577" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="6494:6568" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="6711:10036" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="6712:8876" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="6735:7981" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="6833:7957" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="6863:7368" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="7032:7337" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="7079:7181" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="7215:7301" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="7398:7925" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="7589:7894" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="7636:7738" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="7772:7858" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="8003:8863" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="8101:8840" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="8131:8491" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="8276:8460" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="8323:8424" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="8519:8808" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="8618:8779" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="8655:8746" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="8960:9262" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="8984:9236" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="9054:9211" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="9095:9184" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="9346:9648" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="9370:9622" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="9440:9597" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="9481:9570" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="9732:10015" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="9756:9989" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="9826:9964" ph="..." />
+                <marker date="1523526826764" expanded="true" signature="9867:9956" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TooltipSetter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/util/TooltipSetter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="64" column="32" lean-forward="true" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+            <state relative-caret-position="459">
+              <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1285#1286#0" expanded="true" />
-                <element signature="e#1349#1350#0" expanded="true" />
-                <element signature="e#1540#1541#0" expanded="true" />
-                <element signature="e#1590#1591#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chooseCross.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/chooseCross.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="2023">
+              <caret line="119" column="72" lean-forward="false" selection-start-line="119" selection-start-column="72" selection-end-line="119" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HelpController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/HelpController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-11">
+              <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autokorrel.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/autokorrel.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="833">
+              <caret line="71" column="242" lean-forward="false" selection-start-line="71" selection-start-column="242" selection-end-line="71" selection-end-column="242" />
+              <folding>
+                <marker date="1523526807256" expanded="true" signature="2756:10182" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="3838:3971" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="4100:4233" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="5848:5961" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="6125:6791" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="6147:6415" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="6437:6620" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="6653:6766" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="6875:9042" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="6898:8140" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="6996:8116" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="7026:7529" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="7193:7498" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="7240:7342" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="7376:7462" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="7559:8084" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="7748:8053" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="7795:7897" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="7931:8017" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="8162:9016" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="8260:8993" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="8290:8649" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="8434:8618" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="8481:8582" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="8677:8961" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="8751:8932" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="8798:8899" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="9126:9408" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="9150:9382" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="9219:9357" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="9260:9349" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="9492:9775" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="9516:9749" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="9586:9724" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="9627:9716" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="9859:10161" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="9883:10135" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="9953:10110" ph="..." />
+                <marker date="1523526807256" expanded="true" signature="9994:10083" ph="..." />
               </folding>
             </state>
           </provider>
@@ -148,33 +262,9 @@
       <file leaf-file-name="File.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/devei/java/jdk1.8.0_144/src.zip!/java/io/File.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
+            <state relative-caret-position="20502">
               <caret line="1247" column="0" lean-forward="false" selection-start-line="1247" selection-start-column="0" selection-end-line="1247" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="System.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/devei/java/jdk1.8.0_144/src.zip!/java/lang/System.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="333" column="0" lean-forward="false" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
-              <folding>
-                <element signature="e#11597#11598#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TooltipSetter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/TooltipSetter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -191,10 +281,6 @@
                 <marker date="1523023501216" expanded="true" signature="5895:6355" ph="..." />
                 <marker date="1523023501216" expanded="true" signature="8459:9167" ph="..." />
                 <marker date="1523023501216" expanded="true" signature="9191:11274" ph="..." />
-                <marker date="1523023501216" expanded="true" signature="10831:11202" ph="..." />
-                <marker date="1523023501216" expanded="true" signature="10861:11189" ph="..." />
-                <marker date="1523023501216" expanded="true" signature="10986:11158" ph="..." />
-                <marker date="1523023501216" expanded="true" signature="11020:11125" ph="..." />
               </folding>
             </state>
           </provider>
@@ -269,16 +355,16 @@
         <option value="$PROJECT_DIR$/src/main/chooseAuto.fxml" />
         <option value="$PROJECT_DIR$/src/main/chooseCross.fxml" />
         <option value="$PROJECT_DIR$/src/util/SceneSelector.java" />
-        <option value="$PROJECT_DIR$/src/main/crosskorrel.fxml" />
-        <option value="$PROJECT_DIR$/src/main/autokorrel.fxml" />
         <option value="$PROJECT_DIR$/src/util/CustomTooltip.java" />
         <option value="$PROJECT_DIR$/src/util/ChartDrawer.java" />
         <option value="$PROJECT_DIR$/src/util/TooltipSetter.java" />
         <option value="$PROJECT_DIR$/src/controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/main/main.fxml" />
-        <option value="$PROJECT_DIR$/src/main/help.fxml" />
         <option value="$PROJECT_DIR$/src/controller/HelpController.java" />
+        <option value="$PROJECT_DIR$/src/main/help.fxml" />
+        <option value="$PROJECT_DIR$/src/main/autokorrel.fxml" />
+        <option value="$PROJECT_DIR$/src/main/crosskorrel.fxml" />
       </list>
     </option>
   </component>
@@ -308,9 +394,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -369,7 +455,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -556,14 +642,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24972856" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972856" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36533332" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37813333" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2496" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -580,6 +666,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -633,7 +720,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/controller/HelpController.java</url>
-          <line>35</line>
+          <line>36</line>
           <properties />
           <option name="timeStamp" value="116" />
         </line-breakpoint>
@@ -643,8 +730,14 @@
           <properties />
           <option name="timeStamp" value="117" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/util/TooltipSetter.java</url>
+          <line>20</line>
+          <properties />
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="118" />
+      <option name="time" value="120" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -844,58 +937,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/chooseCross.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="2023">
-          <caret line="119" column="72" lean-forward="false" selection-start-line="119" selection-start-column="72" selection-end-line="119" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/crosskorrel.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="281" lean-forward="false" selection-start-line="16" selection-start-column="244" selection-end-line="16" selection-end-column="281" />
-          <folding>
-            <marker date="1522930194195" expanded="true" signature="6707:10032" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/autokorrel.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" column="242" lean-forward="false" selection-start-line="71" selection-start-column="242" selection-end-line="71" selection-end-column="242" />
-          <folding>
-            <marker date="1522930969074" expanded="true" signature="2756:10178" ph="..." />
-            <marker date="1522930969074" expanded="true" signature="3838:3971" ph="..." />
-            <marker date="1522930969074" expanded="true" signature="4100:4233" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/CustomTooltip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="43" lean-forward="true" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/CustomTooltip.java" />
     <entry file="jar://C:/devei/java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/control/Tooltip.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3420">
           <caret line="738" column="118" lean-forward="false" selection-start-line="738" selection-start-column="118" selection-end-line="738" selection-end-column="118" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -931,26 +977,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/TooltipSetter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="706">
-          <caret line="335" column="0" lean-forward="false" selection-start-line="335" selection-start-column="0" selection-end-line="335" selection-end-column="0" />
-          <folding>
-            <element signature="e#20013#20014#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -961,10 +987,10 @@
     </entry>
     <entry file="jar://C:/devei/java/jdk1.8.0_144/src.zip!/java/lang/System.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state relative-caret-position="4947">
           <caret line="333" column="0" lean-forward="false" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
           <folding>
-            <element signature="e#11597#11598#0" expanded="true" />
+            <element signature="e#11597#11598#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -973,7 +999,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8176">
           <caret line="37" column="17" lean-forward="false" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -981,13 +1006,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/devei/java/jdk1.8.0_144/src.zip!/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
+        <state relative-caret-position="20502">
           <caret line="1247" column="0" lean-forward="false" selection-start-line="1247" selection-start-column="0" selection-end-line="1247" selection-end-column="0" />
           <folding />
         </state>
@@ -997,17 +1021,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/help.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="174" lean-forward="false" selection-start-line="8" selection-start-column="174" selection-end-line="8" selection-end-column="174" />
           <folding />
         </state>
       </provider>
@@ -1023,24 +1036,163 @@
             <marker date="1523023501216" expanded="true" signature="5895:6355" ph="..." />
             <marker date="1523023501216" expanded="true" signature="8459:9167" ph="..." />
             <marker date="1523023501216" expanded="true" signature="9191:11274" ph="..." />
-            <marker date="1523023501216" expanded="true" signature="10831:11202" ph="..." />
-            <marker date="1523023501216" expanded="true" signature="10861:11189" ph="..." />
-            <marker date="1523023501216" expanded="true" signature="10986:11158" ph="..." />
-            <marker date="1523023501216" expanded="true" signature="11020:11125" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/chooseCross.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="2023">
+          <caret line="119" column="72" lean-forward="false" selection-start-line="119" selection-start-column="72" selection-end-line="119" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5202">
+          <caret line="335" column="4" lean-forward="false" selection-start-line="335" selection-start-column="4" selection-end-line="335" selection-end-column="44" />
+          <folding>
+            <element signature="e#19964#19965#0" expanded="true" />
+            <element signature="e#20013#20014#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/help.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/HelpController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="64" column="32" lean-forward="true" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+        <state relative-caret-position="-11">
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1285#1286#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1540#1541#0" expanded="true" />
-            <element signature="e#1590#1591#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/autokorrel.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="71" column="242" lean-forward="false" selection-start-line="71" selection-start-column="242" selection-end-line="71" selection-end-column="242" />
+          <folding>
+            <marker date="1523526807256" expanded="true" signature="2756:10182" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="3838:3971" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="4100:4233" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="5848:5961" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="6125:6791" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="6147:6415" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="6437:6620" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="6653:6766" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="6875:9042" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="6898:8140" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="6996:8116" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="7026:7529" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="7193:7498" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="7240:7342" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="7376:7462" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="7559:8084" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="7748:8053" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="7795:7897" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="7931:8017" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="8162:9016" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="8260:8993" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="8290:8649" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="8434:8618" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="8481:8582" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="8677:8961" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="8751:8932" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="8798:8899" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="9126:9408" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="9150:9382" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="9219:9357" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="9260:9349" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="9492:9775" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="9516:9749" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="9586:9724" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="9627:9716" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="9859:10161" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="9883:10135" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="9953:10110" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="9994:10083" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/crosskorrel.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="281" lean-forward="false" selection-start-line="16" selection-start-column="244" selection-end-line="16" selection-end-column="281" />
+          <folding>
+            <marker date="1523526826764" expanded="true" signature="4915:5028" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="5098:6628" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="5132:5694" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="5725:6021" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="6047:6604" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="6203:6314" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="6231:6305" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="6466:6577" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="6494:6568" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="6711:10036" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="6712:8876" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="6735:7981" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="6833:7957" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="6863:7368" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="7032:7337" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="7079:7181" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="7215:7301" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="7398:7925" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="7589:7894" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="7636:7738" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="7772:7858" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="8003:8863" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="8101:8840" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="8131:8491" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="8276:8460" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="8323:8424" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="8519:8808" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="8618:8779" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="8655:8746" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="8960:9262" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="8984:9236" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="9054:9211" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="9095:9184" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="9346:9648" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="9370:9622" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="9440:9597" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="9481:9570" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="9732:10015" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="9756:9989" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="9826:9964" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="9867:9956" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/TooltipSetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
