@@ -62,6 +62,7 @@ public class SignalBuilder {
         if(impulsCounter==0){
           value=0;
           points.add(new Point(""+i+"",""+value+""));
+          value=amplitude;
         }
         if(impulsCounter<0){
           value=0;
@@ -72,7 +73,7 @@ public class SignalBuilder {
         impulsCounter++;
         points.add(new Point(""+i+"",""+value+""));
 
-        if(impulsCounter==3){
+        if(impulsCounter==4){
           value=0;
           points.add(new Point(""+i+"",""+value+""));
           impulsCounter=-2;

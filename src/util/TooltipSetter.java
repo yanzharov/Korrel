@@ -19,6 +19,9 @@ public class TooltipSetter {
   }
   public static void addTooltip(LineChart lineChart, int step){
     XYChart.Series series = (XYChart.Series) lineChart.getData().get(0);
+    if(series.getData().size()<step){
+      return;
+    }
     List<XYChart.Data> dataList=series.getData().subList(series.getData().size()-step,series.getData().size());
     for(XYChart.Data data:dataList) {
       Node node = data.getNode();

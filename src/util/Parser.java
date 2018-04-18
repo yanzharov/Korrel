@@ -60,7 +60,7 @@ public class Parser {
                 continue;
             }
             if(signalX[i]==signalX[i-1]){
-                if(dublicateSignal[i-dublicateCounts]>dublicateSignal[i-dublicateCounts-1]){
+                if(dublicateSignal[i-dublicateCounts]>dublicateSignal[i-dublicateCounts-1] && dublicateSignal[i-dublicateCounts-1]!=0){
                     dublicateSignal[i-dublicateCounts-1]=dublicateSignal[i-dublicateCounts];
                 }
                 shiftArray(dublicateSignal, i-dublicateCounts);
