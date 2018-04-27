@@ -15,7 +15,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Анализатор корреляционных характеристик");
         SceneSelector.setPrimaryStage(primaryStage);
         loadScene("autokorrel.fxml","AUTO_KORREL_SCENE");
         loadScene("crosskorrel.fxml","CROSS_KORREL_SCENE");

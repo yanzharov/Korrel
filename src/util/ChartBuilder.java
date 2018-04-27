@@ -1,6 +1,8 @@
 package util;
 
 import bean.SignalKeeper;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
 
 public class ChartBuilder {
   public static void buildChart(SignalKeeper signalKeeper1, SignalKeeper signalKeeper2, boolean isAuto){
@@ -17,8 +19,25 @@ public class ChartBuilder {
       SceneSelector.getController(("CROSS_KORREL_SCENE")).crossChart1AxisX.setUpperBound(signalKeeper1.getEnd()+signalKeeper1.getDuration()+5);
       SceneSelector.getController(("CROSS_KORREL_SCENE")).crossChart2AxisX.setLowerBound(signalKeeper2.getBegin()-signalKeeper2.getDuration()-5);
       SceneSelector.getController(("CROSS_KORREL_SCENE")).crossChart2AxisX.setUpperBound(signalKeeper2.getEnd()+signalKeeper2.getDuration()+5);
-      SceneSelector.getController(("CROSS_KORREL_SCENE")).crossChart3AxisX.setLowerBound(-Math.abs(signalKeeper1.getBegin()-signalKeeper2.getDuration())-5);
-      SceneSelector.getController(("CROSS_KORREL_SCENE")).crossChart3AxisX.setUpperBound(signalKeeper1.getEnd()+signalKeeper2.getDuration()+5);
+      SceneSelector.getController(("CROSS_KORREL_SCENE")).crossChart3AxisX.setLowerBound(-(signalKeeper2.getEnd()-signalKeeper1.getBegin())-Math.abs(signalKeeper2.getEnd()-signalKeeper1.getBegin())/2-5);
+      SceneSelector.getController(("CROSS_KORREL_SCENE")).crossChart3AxisX.setUpperBound(signalKeeper1.getEnd()-signalKeeper2.getBegin()+Math.abs(signalKeeper1.getEnd()-signalKeeper2.getBegin())/2+5);
     }
+  }
+
+  public static void moveChart(NumberAxis axis, SignalKeeper signalKeeper){
+    if(!(signalKeeper.getBegin()<axis.getLowerBound() || signalKeeper.getEnd()>axis.getUpperBound())){
+      return;
+    }
+    axis.setLowerBound(signalKeeper.getBegin()-signalKeeper.getDuration()-5);
+    axis.setUpperBound(signalKeeper.getEnd()+signalKeeper.getDuration()+5);
+    signalKeeper.setMoved(true);
+  }
+
+  public static void returnChart(NumberAxis axis, SignalKeeper signalKeeper){
+    if(!signalKeeper.isMoved()){
+      return;
+    }
+    axis.setLowerBound(signalKeeper.getBegin()-signalKeeper.getDuration()-5);
+    axis.setUpperBound(signalKeeper.getEnd()+signalKeeper.getDuration()+5);
   }
 }
