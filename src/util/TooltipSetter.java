@@ -4,6 +4,7 @@ import javafx.scene.Node;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Tooltip;
+import javafx.scene.text.Font;
 
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class TooltipSetter {
     List<XYChart.Data> dataList=series.getData();
     for(XYChart.Data data:dataList){
       Node node = data.getNode();
-      Tooltip tooltip = new Tooltip('('+data.getXValue().toString()+';'+data.getYValue().toString()+')');
+      Tooltip tooltip = new Tooltip('(' + data.getXValue().toString() + " ; " + String.format("%.2f",data.getYValue()) + ')');
       Tooltip.install(node, tooltip);
     }
   }
@@ -25,7 +26,7 @@ public class TooltipSetter {
     List<XYChart.Data> dataList=series.getData().subList(series.getData().size()-step,series.getData().size());
     for(XYChart.Data data:dataList) {
       Node node = data.getNode();
-      Tooltip tooltip = new Tooltip('(' + data.getXValue().toString() + ';' + data.getYValue().toString() + ')');
+      Tooltip tooltip = new Tooltip('(' + data.getXValue().toString() + " ; " + String.format("%.2f",data.getYValue()) + ')');
       Tooltip.install(node, tooltip);
     }
   }
