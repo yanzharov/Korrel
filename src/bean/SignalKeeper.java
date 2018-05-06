@@ -10,6 +10,7 @@ public class SignalKeeper {
     private int step;
     private double[] originSignal;
     private boolean changed;
+    private boolean moved;
     private double[] signalX;
     private double[] signalY;
 
@@ -83,6 +84,14 @@ public class SignalKeeper {
 
     public void setChanged(boolean changed) {
         this.changed = changed;
+    }
+
+    public boolean isMoved() {
+        return moved;
+    }
+
+    public void setMoved(boolean moved) {
+        this.moved = moved;
     }
 
     public double[] getSignalX() {

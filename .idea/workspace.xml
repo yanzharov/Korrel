@@ -7,17 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/bean/SignalKeeper.class" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/bean/SignalKeeper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/controller/Controller.class" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/controller/Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/util/ChartBuilder.class" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/util/ChartBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/util/ComboBoxCreator.class" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/util/ComboBoxCreator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/util/Parser.class" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/util/Parser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/util/SignalBuilder.class" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/util/SignalBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/util/TooltipSetter.class" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/util/TooltipSetter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KorrelFunction/util/ChartDrawer.class" afterPath="$PROJECT_DIR$/out/production/KorrelFunction/util/ChartDrawer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bean/SignalKeeper.java" afterPath="$PROJECT_DIR$/src/bean/SignalKeeper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/Controller.java" afterPath="$PROJECT_DIR$/src/controller/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Main.java" afterPath="$PROJECT_DIR$/src/main/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/ChartBuilder.java" afterPath="$PROJECT_DIR$/src/util/ChartBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/ComboBoxCreator.java" afterPath="$PROJECT_DIR$/src/util/ComboBoxCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/Parser.java" afterPath="$PROJECT_DIR$/src/util/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/SignalBuilder.java" afterPath="$PROJECT_DIR$/src/util/SignalBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/TooltipSetter.java" afterPath="$PROJECT_DIR$/src/util/TooltipSetter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/ChartDrawer.java" afterPath="$PROJECT_DIR$/src/util/ChartDrawer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/SceneSelector.java" afterPath="$PROJECT_DIR$/src/util/SceneSelector.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,8 +83,18 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4148">
-              <caret line="271" column="0" lean-forward="false" selection-start-line="271" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
+            <state relative-caret-position="408">
+              <caret line="337" column="109" lean-forward="false" selection-start-line="337" selection-start-column="109" selection-end-line="337" selection-end-column="109" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="17" column="73" lean-forward="false" selection-start-line="17" selection-start-column="73" selection-end-line="17" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -93,8 +103,8 @@
       <file leaf-file-name="TooltipSetter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/TooltipSetter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="272">
+              <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,66 +112,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComboBoxCreator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/util/ComboBoxCreator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/Parser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SignalBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/SignalBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ChartBuilder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/ChartBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="118" lean-forward="false" selection-start-line="12" selection-start-column="118" selection-end-line="12" selection-end-column="118" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chooseAuto.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/chooseAuto.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="24" lean-forward="false" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SceneSelector.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/SceneSelector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+            <state relative-caret-position="374">
+              <caret line="22" column="182" lean-forward="false" selection-start-line="22" selection-start-column="182" selection-end-line="22" selection-end-column="182" />
               <folding>
-                <element signature="e#1837#1838#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,8 +127,8 @@
       <file leaf-file-name="ChartDrawer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/ChartDrawer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1887">
-              <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+            <state relative-caret-position="440">
+              <caret line="63" column="16" lean-forward="false" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -184,6 +141,19 @@
               <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SceneSelector.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/SceneSelector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="38" column="48" lean-forward="true" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
+              <folding>
+                <element signature="e#1500#1501#0" expanded="true" />
+                <element signature="e#1544#1545#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -246,18 +216,13 @@
         <option value="$PROJECT_DIR$/src/properties/treugImpuls.properties" />
         <option value="$PROJECT_DIR$/src/properties/impuls.properties" />
         <option value="$PROJECT_DIR$/src/bean/StrategyKeeper.java" />
-        <option value="$PROJECT_DIR$/src/bean/SignalKeeper.java" />
         <option value="$PROJECT_DIR$/src/main/creator.fxml" />
         <option value="$PROJECT_DIR$/src/controller/CreateController.java" />
         <option value="$PROJECT_DIR$/src/properties/periodsignal.properties" />
         <option value="$PROJECT_DIR$/src/properties/test.properties" />
         <option value="$PROJECT_DIR$/src/main/chooseAuto.fxml" />
         <option value="$PROJECT_DIR$/src/main/chooseCross.fxml" />
-        <option value="$PROJECT_DIR$/src/util/SceneSelector.java" />
         <option value="$PROJECT_DIR$/src/util/CustomTooltip.java" />
-        <option value="$PROJECT_DIR$/src/util/ChartDrawer.java" />
-        <option value="$PROJECT_DIR$/src/controller/Controller.java" />
-        <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/main/main.fxml" />
         <option value="$PROJECT_DIR$/src/controller/HelpController.java" />
         <option value="$PROJECT_DIR$/src/main/help.fxml" />
@@ -265,9 +230,14 @@
         <option value="$PROJECT_DIR$/src/main/crosskorrel.fxml" />
         <option value="$PROJECT_DIR$/src/util/Parser.java" />
         <option value="$PROJECT_DIR$/src/util/SignalBuilder.java" />
-        <option value="$PROJECT_DIR$/src/util/ChartBuilder.java" />
         <option value="$PROJECT_DIR$/src/util/TooltipSetter.java" />
         <option value="$PROJECT_DIR$/src/util/ComboBoxCreator.java" />
+        <option value="$PROJECT_DIR$/src/bean/SignalKeeper.java" />
+        <option value="$PROJECT_DIR$/src/util/ChartDrawer.java" />
+        <option value="$PROJECT_DIR$/src/util/ChartBuilder.java" />
+        <option value="$PROJECT_DIR$/src/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/util/SceneSelector.java" />
+        <option value="$PROJECT_DIR$/src/main/Main.java" />
       </list>
     </option>
   </component>
@@ -298,46 +268,57 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="KorrelFunction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KorrelFunction" type="462c0819:PsiDirectoryNode" />
+              <item name="Korrel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Korrel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="KorrelFunction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KorrelFunction" type="462c0819:PsiDirectoryNode" />
+              <item name="Korrel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Korrel" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="KorrelFunction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KorrelFunction" type="462c0819:PsiDirectoryNode" />
+              <item name="Korrel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Korrel" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="bean" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="KorrelFunction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KorrelFunction" type="462c0819:PsiDirectoryNode" />
+              <item name="Korrel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Korrel" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="KorrelFunction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KorrelFunction" type="462c0819:PsiDirectoryNode" />
+              <item name="Korrel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Korrel" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="help" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="KorrelFunction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KorrelFunction" type="462c0819:PsiDirectoryNode" />
+              <item name="Korrel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Korrel" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="KorrelFunction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KorrelFunction" type="462c0819:PsiDirectoryNode" />
+              <item name="Korrel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Korrel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Korrel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Korrel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="properties" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Korrel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Korrel" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -345,8 +326,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -360,7 +342,7 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../loyalty-framework-2.0/pom.xml" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
@@ -527,23 +509,27 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32681867" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24894068" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24864277" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.378125" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39093333" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2496" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39724576" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39630836" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Code Iris" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -551,13 +537,9 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Code Iris" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32681867" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -581,19 +563,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/controller/Controller.java</url>
-          <line>130</line>
-          <properties />
-          <option name="timeStamp" value="111" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/util/TooltipSetter.java</url>
-          <line>11</line>
-          <properties />
-          <option name="timeStamp" value="112" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/controller/Controller.java</url>
-          <line>295</line>
+          <line>304</line>
           <properties />
           <option name="timeStamp" value="113" />
         </line-breakpoint>
@@ -604,19 +574,13 @@
           <option name="timeStamp" value="116" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://C:/devei/java/jdk1.8.0_144/src.zip!/java/io/File.java</url>
-          <line>1247</line>
+          <url>file://$PROJECT_DIR$/src/util/ChartBuilder.java</url>
+          <line>27</line>
           <properties />
-          <option name="timeStamp" value="117" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/util/TooltipSetter.java</url>
-          <line>20</line>
-          <properties />
-          <option name="timeStamp" value="119" />
+          <option name="timeStamp" value="123" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="122" />
+      <option name="time" value="125" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -625,7 +589,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/util/SliderCreator.java" />
     <entry file="jar://C:/devei/java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/control/ComboBox.java" />
     <entry file="jar://C:/devei/java/jdk1.8.0_144/javafx-src.zip!/javafx/beans/property/ObjectPropertyBase.java" />
     <entry file="file://$PROJECT_DIR$/src/util/AxisCreator.java" />
@@ -635,8 +598,6 @@
     <entry file="file://$PROJECT_DIR$/src/util/FileSaver.java" />
     <entry file="file://$PROJECT_DIR$/src/properties/ImpulsQueue.properties" />
     <entry file="file://$PROJECT_DIR$/src/properties/hz.properties" />
-    <entry file="jar://C:/devei/java/jdk1.8.0_144/javafx-src.zip!/javafx/beans/property/DoublePropertyBase.java" />
-    <entry file="jar://C:/devei/java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/chart/ValueAxis.java" />
     <entry file="file://$PROJECT_DIR$/src/bean/Point.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -661,21 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bean/SignalKeeper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="101" column="5" lean-forward="false" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
-          <folding>
-            <element signature="e#651#652#0" expanded="false" />
-            <element signature="e#679#680#0" expanded="false" />
-            <element signature="e#905#906#0" expanded="false" />
-            <element signature="e#934#935#0" expanded="false" />
-            <element signature="e#1192#1193#0" expanded="false" />
-            <element signature="e#1219#1220#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bean/StrategyKeeper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -689,14 +635,14 @@
     <entry file="file://$PROJECT_DIR$/src/properties/periodsignal.properties" />
     <entry file="file://$PROJECT_DIR$/src/properties/test.properties" />
     <entry file="file://$PROJECT_DIR$/src/main/creator.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="2907">
           <caret line="171" column="41" lean-forward="false" selection-start-line="171" selection-start-column="41" selection-end-line="171" selection-end-column="41" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/CustomTooltip.java" />
@@ -718,97 +664,75 @@
     <entry file="jar://C:/devei/java/jdk1.8.0_144/src.zip!/java/lang/System.java" />
     <entry file="jar://C:/devei/java/jdk1.8.0_144/src.zip!/java/io/WinNTFileSystem.java" />
     <entry file="jar://C:/devei/java/jdk1.8.0_144/src.zip!/java/io/FileSystem.java" />
-    <entry file="jar://C:/devei/java/jdk1.8.0_144/src.zip!/java/io/File.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/main.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="3043">
           <caret line="179" column="61" lean-forward="false" selection-start-line="179" selection-start-column="61" selection-end-line="179" selection-end-column="61" />
           <folding>
-            <marker date="1523777190237" expanded="true" signature="10641:11229" ph="..." />
-            <marker date="1523777190237" expanded="true" signature="10641:11253" ph="..." />
-            <marker date="1523777190237" expanded="true" signature="10831:11202" ph="..." />
-            <marker date="1523777190237" expanded="true" signature="10861:11189" ph="..." />
-            <marker date="1523777190237" expanded="true" signature="10986:11158" ph="..." />
-            <marker date="1523777190237" expanded="true" signature="11020:11125" ph="..." />
+            <marker date="1523023501216" expanded="true" signature="5895:6355" ph="..." />
+            <marker date="1523023501216" expanded="true" signature="8459:9167" ph="..." />
+            <marker date="1523023501216" expanded="true" signature="9191:11274" ph="..." />
           </folding>
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/chooseCross.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="2023">
-          <caret line="129" column="12" lean-forward="false" selection-start-line="129" selection-start-column="12" selection-end-line="129" selection-end-column="12" />
-          <folding>
-            <marker date="1523777190233" expanded="true" signature="7514:7518" ph="..." />
-            <marker date="1523777190233" expanded="true" signature="7514:7539" ph="..." />
-          </folding>
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="2023">
+          <caret line="119" column="72" lean-forward="false" selection-start-line="119" selection-start-column="72" selection-end-line="119" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/help.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/autokorrel.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/autokorrel.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="1207">
           <caret line="71" column="242" lean-forward="false" selection-start-line="71" selection-start-column="242" selection-end-line="71" selection-end-column="242" />
           <folding>
-            <marker date="1523777190232" expanded="true" signature="9015:9016" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="2756:10182" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="3838:3971" ph="..." />
+            <marker date="1523526807256" expanded="true" signature="4100:4233" ph="..." />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/crosskorrel.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/crosskorrel.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="281" lean-forward="false" selection-start-line="16" selection-start-column="244" selection-end-line="16" selection-end-column="281" />
           <folding>
-            <marker date="1523777190235" expanded="true" signature="8862:8863" ph="..." />
+            <marker date="1523526826764" expanded="true" signature="6711:10036" ph="..." />
           </folding>
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/CreateController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
           <caret line="97" column="37" lean-forward="false" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/SceneSelector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding>
-            <element signature="e#1837#1838#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -820,23 +744,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/ChartBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="118" lean-forward="false" selection-start-line="12" selection-start-column="118" selection-end-line="12" selection-end-column="118" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/chooseAuto.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="24" lean-forward="false" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="63" column="44" lean-forward="true" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/devei/java/jdk1.8.0_144/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20502">
+          <caret line="1247" column="0" lean-forward="false" selection-start-line="1247" selection-start-column="0" selection-end-line="1247" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/devei/java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/chart/ValueAxis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1853">
+          <caret line="164" column="51" lean-forward="false" selection-start-line="164" selection-start-column="51" selection-end-line="164" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/devei/java/jdk1.8.0_144/javafx-src.zip!/javafx/beans/property/DoublePropertyBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/TooltipSetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/HelpController.java">
@@ -849,36 +806,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Parser.java">
+    <entry file="file://$PROJECT_DIR$/src/bean/SignalKeeper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4148">
-          <caret line="271" column="0" lean-forward="false" selection-start-line="271" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/ChartDrawer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1887">
-          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/TooltipSetter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="884">
+          <caret line="88" column="30" lean-forward="false" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#678#679#0" expanded="false" />
+            <element signature="e#706#707#0" expanded="false" />
+            <element signature="e#1706#1707#0" expanded="false" />
+            <element signature="e#1749#1750#0" expanded="false" />
+            <element signature="e#1783#1784#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -887,6 +824,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/ChartDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="63" column="16" lean-forward="false" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/ChartBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="182" lean-forward="false" selection-start-line="22" selection-start-column="182" selection-end-line="22" selection-end-column="182" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/devei/java/jdk1.8.0_144/javafx-src.zip!/javafx/scene/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="732">
+          <caret line="221" column="11" lean-forward="false" selection-start-line="221" selection-start-column="11" selection-end-line="221" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/SceneSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="38" column="48" lean-forward="true" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
+          <folding>
+            <element signature="e#1500#1501#0" expanded="true" />
+            <element signature="e#1544#1545#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="337" column="109" lean-forward="false" selection-start-line="337" selection-start-column="109" selection-end-line="337" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" column="73" lean-forward="false" selection-start-line="17" selection-start-column="73" selection-end-line="17" selection-end-column="73" />
           <folding />
         </state>
       </provider>

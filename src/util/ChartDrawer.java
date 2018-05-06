@@ -61,8 +61,8 @@ public class ChartDrawer {
     lineChart.getData().clear();
 
     int leftShift=(signalKeeper2.getEnd()-signalKeeper1.getBegin())/signalKeeper2.getStep();
-    int begin=-Math.abs(signalKeeper2.getEnd()-signalKeeper1.getBegin());
-    int end=Math.abs(signalKeeper1.getEnd()-signalKeeper2.getBegin());
+    int begin=-(signalKeeper2.getEnd()-signalKeeper1.getBegin());
+    int end=signalKeeper1.getEnd()-signalKeeper2.getBegin();
 
     double signal1[]=signalKeeper1.getSignal();
     double signal2[]=new double[signal1.length+(signalKeeper2.getSignal().length-1)*2];
