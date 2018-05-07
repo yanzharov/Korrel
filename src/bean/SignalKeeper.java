@@ -13,6 +13,8 @@ public class SignalKeeper {
     private boolean moved;
     private double[] signalX;
     private double[] signalY;
+    private int shiftBegin;
+    private int shiftEnd;
 
     public String getType() {
         return type;
@@ -110,4 +112,19 @@ public class SignalKeeper {
         this.signalY = signalY;
     }
 
+    public int getShiftBegin() {
+        return shiftBegin;
+    }
+
+    public void setShiftBegin(int shiftBegin) {
+        this.shiftBegin = shiftBegin;
+    }
+
+    public int getShiftEnd() {
+        return shiftEnd;
+    }
+
+    public void setShiftEnd(int shiftEnd) {
+        this.shiftEnd = shiftEnd;
+    }
 }

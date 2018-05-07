@@ -113,7 +113,7 @@ public class Controller{
     if(SceneSelector.getAutoSignalKeeper().isChanged()) {
       int step=(int)SceneSelector.getController("AUTO_KORREL_SCENE").autoComboBox.getSelectionModel().getSelectedItem();
       ChartDrawer.drawSignal(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart1, SceneSelector.getAutoSignalKeeper());
-      ChartDrawer.drawSignal(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart2, SceneSelector.getAutoSignalKeeper());
+      ChartDrawer.drawShiftSignal(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart2, SceneSelector.getAutoSignalKeeper());
       ChartDrawer.drawKorrelSignal(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart3, SceneSelector.getAutoSignalKeeper(), SceneSelector.getAutoSignalKeeper(), step, SceneSelector.getAutoStrategyKeeper());
       SceneSelector.getAutoSignalKeeper().setChanged(false);
       TooltipSetter.addTooltips(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart3);
@@ -129,7 +129,7 @@ public class Controller{
     if(SceneSelector.getCrossSignalKeeper1().isChanged() || SceneSelector.getCrossSignalKeeper2().isChanged()) {
       int step = (int) SceneSelector.getController("CROSS_KORREL_SCENE").crossComboBox.getSelectionModel().getSelectedItem();
       ChartDrawer.drawSignal(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart1, SceneSelector.getCrossSignalKeeper1());
-      ChartDrawer.drawSignal(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart2, SceneSelector.getCrossSignalKeeper2());
+      ChartDrawer.drawShiftSignal(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart2, SceneSelector.getCrossSignalKeeper2());
       ChartDrawer.drawKorrelSignal(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart3, SceneSelector.getCrossSignalKeeper1(), SceneSelector.getCrossSignalKeeper2(), step, SceneSelector.getCrossStrategyKeeper());
       SceneSelector.getCrossSignalKeeper1().setChanged(false);
       SceneSelector.getCrossSignalKeeper2().setChanged(false);
@@ -174,6 +174,8 @@ public class Controller{
     Parser.parseFile(file,SceneSelector.getAutoSignalKeeper());
     SceneSelector.getAutoSignalKeeper().setChanged(true);
     int difference=SceneSelector.getAutoSignalKeeper().getDuration();
+    SceneSelector.getAutoSignalKeeper().setShiftBegin(SceneSelector.getAutoSignalKeeper().getBegin()+SceneSelector.getAutoSignalKeeper().getDuration());
+    SceneSelector.getAutoSignalKeeper().setShiftEnd(SceneSelector.getAutoSignalKeeper().getEnd()+SceneSelector.getAutoSignalKeeper().getDuration());
     ComboBoxCreator.createComboBox(SceneSelector.getController("AUTO_KORREL_SCENE").autoComboBox, SceneSelector.getAutoSignalKeeper().getStep(),difference);
     ChartBuilder.buildChart(SceneSelector.getAutoSignalKeeper(),SceneSelector.getAutoSignalKeeper(),true);
     ChartDrawer.drawSignal(SceneSelector.getController("CHOOSE_AUTO_SCENE").chooseAutoChart,SceneSelector.getAutoSignalKeeper());
@@ -188,6 +190,12 @@ public class Controller{
     SceneSelector.getCrossSignalKeeper1().setChanged(true);
     int difference1=SceneSelector.getCrossSignalKeeper1().getDuration();
     int difference2=SceneSelector.getCrossSignalKeeper2().getDuration();
+    SceneSelector.getCrossSignalKeeper1().setShiftBegin(SceneSelector.getCrossSignalKeeper1().getBegin());
+    SceneSelector.getCrossSignalKeeper1().setShiftEnd(SceneSelector.getCrossSignalKeeper1().getEnd());
+    if(SceneSelector.getCrossSignalKeeper2()!=null){
+      SceneSelector.getCrossSignalKeeper2().setShiftBegin(SceneSelector.getCrossSignalKeeper2().getBegin()-(SceneSelector.getCrossSignalKeeper2().getBegin()-SceneSelector.getCrossSignalKeeper1().getEnd()));
+      SceneSelector.getCrossSignalKeeper2().setShiftEnd(SceneSelector.getCrossSignalKeeper2().getEnd()-(SceneSelector.getCrossSignalKeeper2().getBegin()-SceneSelector.getCrossSignalKeeper1().getEnd()));
+    }
     ComboBoxCreator.createComboBox(SceneSelector.getController("CROSS_KORREL_SCENE").crossComboBox, SceneSelector.getCrossSignalKeeper1().getStep(),SceneSelector.getCrossSignalKeeper2().getStep(),difference1,difference2);
     ChartBuilder.buildChart(SceneSelector.getCrossSignalKeeper1(),SceneSelector.getCrossSignalKeeper2(),false);
     ChartDrawer.drawSignal(SceneSelector.getController("CHOOSE_CROSS_SCENE").chooseCrossChart1,SceneSelector.getCrossSignalKeeper1());
@@ -202,6 +210,10 @@ public class Controller{
     SceneSelector.getCrossSignalKeeper2().setChanged(true);
     int difference1=SceneSelector.getCrossSignalKeeper1().getDuration();
     int difference2=SceneSelector.getCrossSignalKeeper2().getDuration();
+    if(SceneSelector.getCrossSignalKeeper1()!=null){
+      SceneSelector.getCrossSignalKeeper2().setShiftBegin(SceneSelector.getCrossSignalKeeper2().getBegin()-(SceneSelector.getCrossSignalKeeper2().getBegin()-SceneSelector.getCrossSignalKeeper1().getEnd()));
+      SceneSelector.getCrossSignalKeeper2().setShiftEnd(SceneSelector.getCrossSignalKeeper2().getEnd()-(SceneSelector.getCrossSignalKeeper2().getBegin()-SceneSelector.getCrossSignalKeeper1().getEnd()));
+    }
     ComboBoxCreator.createComboBox(SceneSelector.getController("CROSS_KORREL_SCENE").crossComboBox, SceneSelector.getCrossSignalKeeper1().getStep(),SceneSelector.getCrossSignalKeeper2().getStep(),difference1, difference2);
     ChartBuilder.buildChart(SceneSelector.getCrossSignalKeeper1(),SceneSelector.getCrossSignalKeeper2(),false);
     ChartDrawer.drawSignal(SceneSelector.getController("CHOOSE_CROSS_SCENE").chooseCrossChart2,SceneSelector.getCrossSignalKeeper2());
@@ -219,7 +231,9 @@ public class Controller{
       SceneSelector.getAutoSignalKeeper().setEnd(SceneSelector.getAutoSignalKeeper().getBegin());
       SceneSelector.getAutoSignalKeeper().setBegin(SceneSelector.getAutoSignalKeeper().getBegin()-SceneSelector.getAutoSignalKeeper().getDuration());
       SceneSelector.getController("AUTO_KORREL_SCENE").autoComboBox.setDisable(true);
+      ChartBuilder.moveChart(SceneSelector.getController("AUTO_KORREL_SCENE").autoChart2AxisX, SceneSelector.getAutoSignalKeeper());
       SceneSelector.getAutoSignalKeeper().setChanged(true);
+      ChartDrawer.drawSignal(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart2,SceneSelector.getAutoSignalKeeper());
     }
     else{
       SceneSelector.getController("AUTO_KORREL_SCENE").autoChart3AxisY.setAutoRanging(true);
@@ -228,8 +242,8 @@ public class Controller{
       ChartBuilder.returnChart(SceneSelector.getController("AUTO_KORREL_SCENE").autoChart2AxisX,SceneSelector.getAutoSignalKeeper());
       SceneSelector.getController("AUTO_KORREL_SCENE").autoComboBox.setDisable(false);
       SceneSelector.getAutoSignalKeeper().setChanged(false);
+      ChartDrawer.drawShiftSignal(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart2,SceneSelector.getAutoSignalKeeper());
     }
-    ChartDrawer.drawSignal(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart2,SceneSelector.getAutoSignalKeeper());
     ChartDrawer.drawKorrelSignal(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart3,SceneSelector.getAutoSignalKeeper(),SceneSelector.getAutoSignalKeeper(),step, SceneSelector.getAutoStrategyKeeper());
     TooltipSetter.addTooltips(SceneSelector.getController("AUTO_KORREL_SCENE").autoKorrelChart3);
   }
@@ -249,6 +263,7 @@ public class Controller{
       SceneSelector.getCrossSignalKeeper1().setChanged(true);
       SceneSelector.getCrossSignalKeeper2().setChanged(true);
       ChartBuilder.moveChart(SceneSelector.getController("CROSS_KORREL_SCENE").crossChart2AxisX, SceneSelector.getCrossSignalKeeper2());
+      ChartDrawer.drawSignal(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart2,SceneSelector.getCrossSignalKeeper2());
     }
     else{
       SceneSelector.getController("CROSS_KORREL_SCENE").crossChart3AxisY.setAutoRanging(true);
@@ -258,8 +273,8 @@ public class Controller{
       SceneSelector.getController("CROSS_KORREL_SCENE").crossComboBox.setDisable(false);
       SceneSelector.getCrossSignalKeeper1().setChanged(false);
       SceneSelector.getCrossSignalKeeper2().setChanged(false);
+      ChartDrawer.drawShiftSignal(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart2,SceneSelector.getCrossSignalKeeper2());
     }
-    ChartDrawer.drawSignal(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart2,SceneSelector.getCrossSignalKeeper2());
     ChartDrawer.drawKorrelSignal(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart3,SceneSelector.getCrossSignalKeeper1(),SceneSelector.getCrossSignalKeeper2(),step, SceneSelector.getCrossStrategyKeeper());
     TooltipSetter.addTooltips(SceneSelector.getController("CROSS_KORREL_SCENE").crossKorrelChart3);
   }

@@ -33,6 +33,31 @@ public class ChartDrawer {
     lineChart.getData().add(series);
   }
 
+  public static void drawShiftSignal(LineChart lineChart, SignalKeeper signalKeeper){
+    if(signalKeeper.getSignal()==null){
+      return;
+    }
+    lineChart.getData().clear();
+    XYChart.Series series = new XYChart.Series();
+    int currentDiscret=0;
+    int begin=signalKeeper.getShiftBegin();
+    int end=signalKeeper.getShiftEnd();
+    double[] signalX=signalKeeper.getSignalX();
+    double[] signalY=signalKeeper.getSignalY();
+
+    for(int i=begin;i<end+1;i+=signalKeeper.getStep()) {
+      if(!(signalX.length-1==currentDiscret)&&currentDiscret!=0&&signalX[currentDiscret]==signalX[currentDiscret-1]){
+        i--;
+      }
+      series.getData().add(new XYChart.Data(i, signalY[currentDiscret]));
+      currentDiscret++;
+      if(i==end&&!(signalX.length-1<currentDiscret)&&signalX[currentDiscret]==signalX[currentDiscret-1]){
+        i--;
+      }
+    }
+    lineChart.getData().add(series);
+  }
+
   public static void drawSignal(LineChart lineChart, int begin, int end, double[] signalY, double[] signalX, int step){
     if(signalY==null){
       return;
