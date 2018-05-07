@@ -31,6 +31,7 @@ import java.util.ListIterator;
 import java.util.ResourceBundle;
 
 public class CreateController implements Initializable{
+  public TextField freqTextField;
   private ObservableList<Point> pointsData = FXCollections.observableArrayList();
   private double[] signalY;
   private double[] signalX;
@@ -58,6 +59,8 @@ public class CreateController implements Initializable{
   public TextField yAddField;
   @FXML
   public ChoiceBox signals;
+  @FXML
+  public TextField freqTextField;
 
   public void createTable(ActionEvent actionEvent) {
     pointsData.clear();

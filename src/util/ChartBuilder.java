@@ -37,7 +37,7 @@ public class ChartBuilder {
     if(!signalKeeper.isMoved()){
       return;
     }
-    axis.setLowerBound(signalKeeper.getBegin()-signalKeeper.getDuration()-5);
-    axis.setUpperBound(signalKeeper.getEnd()+signalKeeper.getDuration()+5);
+    axis.setLowerBound(signalKeeper.getShiftBegin()-signalKeeper.getDuration()-5);
+    axis.setUpperBound(signalKeeper.getShiftEnd()+signalKeeper.getDuration()+5);
   }
 }

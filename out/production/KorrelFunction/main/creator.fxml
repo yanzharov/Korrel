@@ -63,25 +63,25 @@
                <children>
                   <TextField GridPane.columnIndex="2" fx:id="xAddField" />
                   <TextField fx:id="yAddField" GridPane.columnIndex="4" />
-                  <Button mnemonicParsing="false" onAction="#addPoint" text="Внести" GridPane.columnIndex="5">
+                  <Button mnemonicParsing="false" onAction="#addPoint" text="Внести" wrapText="true" GridPane.columnIndex="5">
                      <font>
                         <Font size="14.0" />
                      </font>
                      <GridPane.margin>
                         <Insets left="10.0" />
                      </GridPane.margin></Button>
-                  <Button mnemonicParsing="false" onAction="#deletePoint" text="Удалить" GridPane.columnIndex="6">
+                  <Button mnemonicParsing="false" onAction="#deletePoint" text="Удалить" wrapText="true" GridPane.columnIndex="6">
                      <font>
                         <Font size="14.0" />
                      </font></Button>
-                  <Label text="Время" GridPane.columnIndex="1">
+                  <Label text="Время:" wrapText="true" GridPane.columnIndex="1">
                      <font>
                         <Font size="14.0" />
                      </font>
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin></Label>
-                  <Label text="Значение" GridPane.columnIndex="3">
+                  <Label text="Значение:" wrapText="true" GridPane.columnIndex="3">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -142,26 +142,28 @@
             </GridPane>
             <GridPane GridPane.rowIndex="3">
               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="18.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="3.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="9.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="9.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="11.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="7.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="9.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="9.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="6.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="19.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="9.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="9.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="3.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <TextField fx:id="amplitudeTextField" GridPane.columnIndex="6" />
-                  <Label text="Амплитуда:" GridPane.columnIndex="5">
+                  <Label text="Амплитуда:" wrapText="true" GridPane.columnIndex="5">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -169,22 +171,22 @@
                         <Insets left="6.0" />
                      </GridPane.margin>
                   </Label>
-                  <ChoiceBox fx:id="signals" prefWidth="150.0" GridPane.columnIndex="8" />
-                  <Label text="Сигнал:" GridPane.columnIndex="7">
+                  <ChoiceBox fx:id="signals" prefWidth="150.0" GridPane.columnIndex="10" />
+                  <Label text="Сигнал:" wrapText="true" GridPane.columnIndex="9">
                      <font>
                         <Font size="14.0" />
                      </font>
                      <GridPane.margin>
-                        <Insets left="6.0" />
+                        <Insets left="7.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label text="Начало:" GridPane.columnIndex="1">
+                  <Label text="Начало:" wrapText="true" GridPane.columnIndex="1">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                   <TextField fx:id="beginTextField" GridPane.columnIndex="2" />
-                  <Label text="Конец:" GridPane.columnIndex="3">
+                  <Label text="Конец:" wrapText="true" GridPane.columnIndex="3">
                      <GridPane.margin>
                         <Insets left="10.0" />
                      </GridPane.margin>
@@ -197,7 +199,7 @@
                         <Insets left="2.0" />
                      </GridPane.margin>
                   </TextField>
-                  <Button mnemonicParsing="false" onAction="#createTable" text="Задать" GridPane.columnIndex="9">
+                  <Button mnemonicParsing="false" onAction="#createTable" text="Задать" wrapText="true" GridPane.columnIndex="11">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
@@ -205,14 +207,23 @@
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#constructSignal" text="Отобразить" GridPane.columnIndex="10">
+                  <Button mnemonicParsing="false" onAction="#constructSignal" text="Отобразить" wrapText="true" GridPane.columnIndex="12">
                      <font>
                         <Font size="14.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" onAction="#saveFile" text="Сохранить" GridPane.columnIndex="11">
+                  <Button mnemonicParsing="false" onAction="#saveFile" text="Сохранить" wrapText="true" GridPane.columnIndex="13">
                      <font>
                         <Font size="14.0" />
                      </font></Button>
+                  <Label text="Частота:" wrapText="true" GridPane.columnIndex="7">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="6.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="freqTextField" GridPane.columnIndex="8" />
                </children>
             </GridPane>
          </children>
