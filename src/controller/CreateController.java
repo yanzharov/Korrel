@@ -31,13 +31,13 @@ import java.util.ListIterator;
 import java.util.ResourceBundle;
 
 public class CreateController implements Initializable{
-  public TextField freqTextField;
   private ObservableList<Point> pointsData = FXCollections.observableArrayList();
   private double[] signalY;
   private double[] signalX;
   private int begin;
   private int end;
   private double amplitude;
+  private int freq;
   private String currentSignal;
   @FXML
   public TableView<Point> points;
@@ -64,18 +64,36 @@ public class CreateController implements Initializable{
 
   public void createTable(ActionEvent actionEvent) {
     pointsData.clear();
+    freq=1;
     double amplitude=0;
     String beginStr=beginTextField.getCharacters().toString();
     String endStr=endTextField.getCharacters().toString();
     String amplitudeStr=amplitudeTextField.getCharacters().toString();
+    String freqStr=freqTextField.getCharacters().toString();
+    String[] freqSignalsStr={"Косинусоидальный сигнал","Синусоидальный сигнал","Последовательность прямоугольных видеоимпульсов при s(t)>0",
+            "Последовательность прямоугольных видеоимпульсов при s(t)>0 и s(t)<0"};
+    List<String> freqSignalsList=Arrays.asList(freqSignalsStr);
+
+    if(freqSignalsList.contains(signals.getSelectionModel().getSelectedItem().toString()) && !freqStr.matches("-?[0-9]+([0-9]+)?")){
+      return;
+    }
+    else if(freqSignalsList.contains(signals.getSelectionModel().getSelectedItem().toString())){
+      freq=Integer.valueOf(freqTextField.getCharacters().toString());;
+    }
+
     if(!beginStr.matches("-?[0-9]+")||!endStr.matches("-?[0-9]+")||!amplitudeStr.matches("-?[0-9]+([0-9]+)?")){
       return;
     }
+
     begin=Integer.valueOf(beginTextField.getCharacters().toString());
     end=Integer.valueOf(endTextField.getCharacters().toString());
     amplitude=Double.valueOf(amplitudeTextField.getCharacters().toString());
 
-    pointsData.addAll(SignalBuilder.buildSignal(signals.getSelectionModel().getSelectedItem().toString(),amplitude,begin,end));
+    if(begin>end || freq<0){
+      return;
+    }
+
+    pointsData.addAll(SignalBuilder.buildSignal(signals.getSelectionModel().getSelectedItem().toString(),amplitude,begin,end, freq));
 
     points.setItems(pointsData);
   }
@@ -97,7 +115,8 @@ public class CreateController implements Initializable{
         }
     );
     String[] signalsStr={"Прямоугольный видеоимпульс","Треугольный видеоимпульс","Прямой треугольный видеоимпульс",
-        "Косинусоидальный сигнал","Синусоидальный сигнал","Последовательность прямоугольных видеоимпульсов"};
+        "Косинусоидальный сигнал","Синусоидальный сигнал","Последовательность прямоугольных видеоимпульсов при s(t)>0",
+            "Последовательность прямоугольных видеоимпульсов при s(t)>0 и s(t)<0"};
     signals.getItems().addAll(signalsStr);
     signals.getSelectionModel().select(0);
   }

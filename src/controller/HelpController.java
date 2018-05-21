@@ -34,7 +34,7 @@ public class HelpController implements Initializable{
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
-    File selectedDirectory = new File(absolutePath+"/src/help/");
+    File selectedDirectory = new File(absolutePath+"/help/");
 
     if (selectedDirectory != null) {
       FilenameFilter filterPng = new FilenameFilter() {
